@@ -2,110 +2,119 @@
 <html lang="en"><head><meta charset="utf-8"><title>Bhagavad Geeta Hub – Swami Harihar Ji Maharaj</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <style>
-:root{--bg:#fff7ea;--card:#fff;--ink:#3a2410;--mut:#7a6350;--ac:#d9641e;--ac2:#8a2b0f;--ln:#f0dcc2}
-@media (prefers-color-scheme:dark){:root{--bg:#1c1410;--card:#2a1e17;--ink:#f6e8d6;--mut:#c2a98f;--ac:#f08a45;--ac2:#ffb784;--ln:#43322a}}
+:root{color-scheme:light;--ink:#4a2c3d;--mut:#7d6272;--gold:#ffe08a;--teal:#2a8a98;--pink:#e0679a;--pur:#8b6bd6;--ac:#ff9a76;--ac2:#b4457a}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 Georgia,serif;padding-bottom:env(safe-area-inset-bottom,0)}
-.w{max-width:960px;margin:0 auto;padding:0 18px}
-.hero{background:linear-gradient(rgba(60,20,5,.72),rgba(60,20,5,.82)),url(https://www.geetadhamindia.com/wp-content/uploads/2020/02/West-end-view-of-Dham-copy2-1.png) center/cover #5a2a10;color:#fff;text-align:center;padding:calc(40px + env(safe-area-inset-top,0)) 18px 44px}
-.hero img{width:150px;height:150px;object-fit:cover;object-position:top;border-radius:50%;border:4px solid #f5c36b;box-shadow:0 6px 24px #0008}
-.om{font-size:34px;color:#f5c36b;margin:8px 0 0}
-h1{font-size:clamp(26px,6.5vw,42px);margin:4px 0;color:#ffe2a8}
-.sub{opacity:.92;margin:0 0 18px}
-.btn{display:inline-block;padding:11px 20px;border-radius:99px;background:var(--ac);color:#fff;text-decoration:none;font:600 15px system-ui,sans-serif;margin:4px;border:2px solid var(--ac);cursor:pointer}
-.btn.alt{background:transparent;color:#ffe2a8;border-color:#ffe2a8}
-nav{display:flex;gap:6px 14px;justify-content:center;flex-wrap:wrap;font:14px system-ui,sans-serif;padding:12px 8px;background:var(--card);border-bottom:1px solid var(--ln);position:sticky;top:0;z-index:5}
-nav a{color:var(--ac);text-decoration:none;font-weight:600}
-section{padding:30px 0;border-top:1px solid var(--ln)}
-h2{color:var(--ac2);margin:0 0 12px}
-.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
-.c{background:var(--card);border:1px solid var(--ln);border-radius:14px;padding:16px}
-.c h3{margin:0 0 4px;font-size:18px}.c p{margin:0 0 8px;color:var(--mut);font-size:15px}
-.c a,a.l{color:var(--ac);font:600 15px system-ui,sans-serif;text-decoration:none}
-.ph{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
-.ph img{width:100%;height:150px;object-fit:cover;border-radius:12px;display:block}
-.ph figure{margin:0}.ph figcaption{font:13px system-ui,sans-serif;color:var(--mut);text-align:center;margin-top:3px}
-.two{display:grid;grid-template-columns:minmax(0,220px) 1fr;gap:18px;align-items:start}
-.two img{width:100%;border-radius:14px}
-@media(max-width:560px){.two{grid-template-columns:1fr}.two img{max-width:240px;margin:auto}}
-.chips{display:flex;flex-wrap:wrap;gap:8px}
-.chip{padding:7px 13px;border:1px solid var(--ln);background:var(--card);border-radius:99px;font:14px system-ui,sans-serif;color:var(--ink);text-decoration:none}
-a.chip{color:var(--ac);font-weight:600}
-.don{background:linear-gradient(135deg,#8a2b0f,#d9641e);color:#fff;border-radius:16px;padding:22px;text-align:center}
-.don h2{color:#ffe2a8}.don a{color:#ffe2a8}
-#q{width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--ln);background:var(--card);color:var(--ink);font:16px system-ui,sans-serif;margin:6px 0 10px}
-.gh{margin:22px 0 8px;font-size:19px;color:var(--ac2)}.gh small{font:13px system-ui,sans-serif;color:var(--mut)}
-details{background:var(--card);border:1px solid var(--ln);border-radius:12px;margin:6px 0}
-summary{padding:11px 14px;cursor:pointer;font:600 15px system-ui,sans-serif}summary small{display:block;font-weight:400;color:var(--mut)}
-.dt{padding:2px 14px 12px;font:15px/1.6 system-ui,sans-serif;color:var(--mut)}.dt a{color:var(--ac);font-weight:600;text-decoration:none}
-.note{color:var(--mut);font-size:14px;margin-top:16px}
-footer{text-align:center;color:var(--mut);font-size:14px;padding:26px 0 44px;border-top:1px solid var(--ln)}
-#mus{position:fixed;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0));z-index:9;border-radius:99px;border:0;background:var(--ac);color:#fff;padding:11px 16px;font:600 14px system-ui,sans-serif;box-shadow:0 4px 14px #0006;cursor:pointer}
+body{margin:0;background:#fffaf5;color:var(--ink);font:18px/1.7 Georgia,serif;padding-bottom:env(safe-area-inset-bottom,0);overflow-x:hidden}
+.w{max-width:980px;margin:0 auto;padding:0 18px}
+.hero{background:linear-gradient(rgba(255,226,236,.86),rgba(226,216,255,.9)),url(https://www.geetadhamindia.com/wp-content/uploads/2020/02/West-end-view-of-Dham-copy2-1.png) center/cover #ffe2ec;color:var(--ink);text-align:center;padding:calc(34px + env(safe-area-inset-top,0)) 18px 62px}
+.hero img{width:176px;height:176px;object-fit:cover;object-position:top;border-radius:50%;border:6px solid #fff;box-shadow:0 0 0 6px #ffd0e0,0 10px 26px #b4457a40;animation:glow 3s ease-in-out infinite}
+@keyframes glow{50%{box-shadow:0 0 0 12px #ffe08a,0 10px 30px #b4457a55}}
+.om{font-size:42px;color:#e8a317;margin:4px 0 0}
+h1{font-size:clamp(30px,8vw,50px);margin:0;color:var(--ac2);line-height:1.15}
+.sub{margin:6px 0 16px;font-size:18px}
+.btn{display:inline-block;padding:13px 24px;border-radius:99px;background:linear-gradient(135deg,#ffd3e1,#ffe0b8);color:#7a2a50;text-decoration:none;font:800 16px system-ui,sans-serif;margin:4px;border:2px solid #fff;cursor:pointer;box-shadow:0 5px 14px #b4457a30}
+.btn.alt{background:#ffffffcc;color:var(--ac2);border-color:#ffd0e0}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:980px;margin:-34px auto 0;padding:0 14px;position:relative;z-index:2}
+.tile{display:block;text-align:center;padding:14px 4px;border-radius:20px;color:#4a2c3d;text-decoration:none;font:800 14px system-ui,sans-serif;box-shadow:0 8px 18px #7d627230;border:2px solid #fff}
+.tile i{display:block;font-size:32px;font-style:normal;margin-bottom:2px}
+.tile:nth-child(1){background:linear-gradient(135deg,#e6dcff,#f3d9ff)}.tile:nth-child(2){background:linear-gradient(135deg,#d3f0ff,#e0f7fa)}.tile:nth-child(3){background:linear-gradient(135deg,#d7f5e4,#eaf9c9)}
+.tile:nth-child(4){background:linear-gradient(135deg,#ffe2cc,#fff0b8)}.tile:nth-child(5){background:linear-gradient(135deg,#ffd6e5,#ffe3ea)}.tile:nth-child(6){background:linear-gradient(135deg,#d6e4ff,#e3ecff)}
+nav{display:flex;gap:6px;overflow-x:auto;white-space:nowrap;font:14px system-ui,sans-serif;padding:10px;margin-top:16px;background:linear-gradient(90deg,#ffd6e5,#ffe2cc,#e6dcff);position:sticky;top:0;z-index:6;box-shadow:0 3px 10px #7d627226}
+nav a{color:var(--ac2);text-decoration:none;font-weight:800;padding:7px 14px;border-radius:99px;background:#ffffffb8}
+.verse{background:linear-gradient(135deg,#d3f0ff,#e6dcff);color:var(--ink);text-align:center;padding:24px 18px}
+.verse b{display:block;font-size:clamp(20px,5vw,28px);color:var(--ac2);line-height:1.5}.verse span{font:16px system-ui,sans-serif;color:var(--mut)}
+.band{padding:36px 0}
+.b1{background:#fff3c9}.b2{background:#e9e0ff}.b3{background:#ffe5d2}.b4{background:#d9f0ff}.b5{background:#ffdcea}.b6{background:#d9f6e6}.b7{background:linear-gradient(135deg,#ffd6e5,#ffe5c4)}.b8{background:#e3ecff}
+h2{color:var(--ac2);margin:0 0 16px;font-size:28px;line-height:1.2}
+.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.c{background:#fff;color:var(--ink);border-radius:20px;padding:18px;box-shadow:0 6px 16px #7d627222;border-top:7px solid #ffb199}
+.g .c:nth-child(4n+2){border-top-color:#8fd3dd}.g .c:nth-child(4n+3){border-top-color:#f4a6c6}.g .c:nth-child(4n){border-top-color:#b9a5ee}
+.c h3{margin:0 0 4px;font-size:19px;color:var(--ac2)}.c p{margin:0 0 10px;color:var(--mut);font-size:16px}
+.c a,a.l{color:var(--teal);font:800 16px system-ui,sans-serif;text-decoration:none}
+.strip{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 14px}
+.strip figure{margin:0;flex:0 0 80%;max-width:350px;scroll-snap-align:center}
+.strip img{width:100%;height:220px;object-fit:cover;border-radius:18px;border:5px solid #fff;box-shadow:0 8px 20px #7d627240;display:block}
+.strip figcaption{font:700 14px system-ui,sans-serif;color:var(--ac2);text-align:center;margin-top:6px}
+.two{display:grid;grid-template-columns:minmax(0,240px) 1fr;gap:22px;align-items:start;background:#fff;border-radius:22px;padding:18px;box-shadow:0 6px 18px #7d627222;border-left:9px solid #f4a6c6}
+.two img{width:100%;border-radius:16px;border:4px solid #ffe08a}
+@media(max-width:560px){.two{grid-template-columns:1fr}.two img{max-width:250px;margin:auto}}
+.don{text-align:center}.don a{color:var(--ac2);font-weight:800}
+#q{width:100%;padding:15px 18px;border-radius:99px;border:3px solid #f4a6c6;background:#fff;color:var(--ink);font:17px system-ui,sans-serif;margin:6px 0 10px}
+#fl{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:6px}
+#fl button{padding:9px 16px;border-radius:99px;border:2px solid #f4a6c6;background:#fff;color:var(--ac2);font:800 14px system-ui,sans-serif;cursor:pointer}
+#fl button.on{background:#f4a6c6;color:#4a1030}
+.gh{margin:22px 0 8px;font-size:21px}.gh small{font:14px system-ui,sans-serif;color:var(--mut)}
+.grp.a .gh{color:#2f8f5b}.grp.a details{border-left:8px solid #8fe0b0}.grp.i .gh{color:#d2692f}.grp.i details{border-left:8px solid #ffc29c}
+details{background:#fff;border-radius:14px;margin:8px 0;box-shadow:0 3px 8px #7d627218}
+summary{padding:14px 16px;cursor:pointer;font:800 16px system-ui,sans-serif}summary small{display:block;font-weight:400;color:var(--mut);font-size:14px}
+.dt{padding:2px 16px 14px;font:16px/1.7 system-ui,sans-serif;color:var(--mut)}.dt a{color:var(--teal);font-weight:800;text-decoration:none}
+.note{color:var(--mut);font-size:15px;margin-top:16px}
+footer{text-align:center;color:var(--ink);font-size:15px;padding:30px 12px 70px;background:linear-gradient(135deg,#ffd6e5,#e6dcff)}
+footer a{color:var(--ac2);font-weight:800}
+#mus{position:fixed;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0));z-index:9;border-radius:99px;border:2px solid #fff;background:linear-gradient(135deg,#ffc2d8,#ffd9b0);color:#7a2a50;padding:13px 20px;font:800 15px system-ui,sans-serif;box-shadow:0 5px 16px #b4457a40;cursor:pointer}
+.pt{position:fixed;top:-40px;z-index:1;pointer-events:none;font-size:22px;animation:fall 12s linear infinite;opacity:.8}
+@keyframes fall{to{transform:translateY(110vh) rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.pt,.hero img{animation:none}}
 </style></head><body>
+<span class="pt" style="left:8%">🌸</span><span class="pt" style="left:30%;animation-delay:4s">🌼</span><span class="pt" style="left:55%;animation-delay:8s">🪷</span><span class="pt" style="left:80%;animation-delay:2s">🌺</span>
 <header class="hero">
 <img src="https://www.geetadhamindia.com/wp-content/uploads/2020/02/Gurudev_new-771x1024.png" alt="Shree 1008 Swami Harihar Ji Maharaj">
 <div class="om">ॐ</div><h1>Bhagavad Geeta Hub</h1>
-<p class="sub">Shree 1008 Swami Harihar Ji Maharaj (1899–2000)<br>Jai Shri Krishna · Jai Gurudev</p>
-<a class="btn" href="#donate">🙏 Donate</a>
-<a class="btn alt" href="https://www.youtube.com/@bhagavadgeeta-rajukaramcha9923" target="_blank" rel="noopener">▶ YouTube</a>
-<button class="btn alt" id="share">📤 Share</button>
+<p class="sub">Shree 1008 Swami Harihar Ji Maharaj (1899–2000)<br>🪷 Jai Shri Krishna · Jai Gurudev 🪷</p>
+<a class="btn" href="#donate">🙏 Donate</a><a class="btn alt" href="https://www.youtube.com/@bhagavadgeeta-rajukaramcha9923" target="_blank" rel="noopener">▶ YouTube</a><button class="btn alt" id="share">📤 Share</button>
 </header>
-<nav><a href="#about">Gurudev</a><a href="#gallery">Gallery</a><a href="#listen">Listen</a><a href="#zoom">Live Zoom</a><a href="#ashrams">Ashrams</a><a href="#seva">Seva</a><a href="#donate">Donate</a><a href="#contact">Contact</a></nav>
-<div class="w">
-<section id="about"><h2>Gurudev's Message</h2>
+<div class="tiles"><a class="tile" href="#listen"><i>🎶</i>Listen</a><a class="tile" href="#zoom"><i>💻</i>Live Zoom</a><a class="tile" href="#ashrams"><i>🛕</i>Find Ashram</a><a class="tile" href="#gallery"><i>📸</i>Photos</a><a class="tile" href="#donate"><i>🙏</i>Donate</a><a class="tile" href="#contact"><i>📞</i>Contact</a></div>
+<nav><a href="#about">Gurudev</a><a href="#gallery">Photos</a><a href="#listen">Listen</a><a href="#zoom">Live Zoom</a><a href="#ashrams">Ashrams</a><a href="#seva">Seva</a><a href="#donate">Donate</a><a href="#contact">Contact</a></nav>
+<div class="verse"><b>कर्मण्येवाधिकारस्ते मा फलेषु कदाचन</b><span>Bhagavad Geeta 2.47 · You have the right to act, but never to the fruits of your action.</span></div>
+
+<section id="about" class="band b1"><div class="w"><h2>🙏 Gurudev's Message</h2>
 <div class="two"><img src="https://www.geetadhamindia.com/wp-content/uploads/2020/02/Gurudev_new-771x1024.png" alt="Swami Harihar Ji Maharaj"><div>
 <p>Swami Harihar Ji Maharaj gave his early life to India's freedom struggle, then devoted himself to saints and the ancient scriptures. Lord Krishna's teaching in the Bhagavad Geeta became his guide, and he held that it serves all of humanity, beyond any caste or religion.</p>
-<p>His whole life was given to world peace and universal brotherhood. The Geeta Ashram, Delhi, formed in 1950, now has branches across India and the world, and the annual International Geeta Conference is held at Geeta Dham during Gurudev's birthday celebrations at Holi.</p></div></div></section>
+<p>His whole life was given to world peace and universal brotherhood. The Geeta Ashram, Delhi, formed in 1950, now has branches across India and the world, and the annual International Geeta Conference is held at Geeta Dham during Gurudev's birthday celebrations at Holi.</p></div></div></div></section>
 
-<section id="gallery"><h2>Glimpses of Geeta Dham</h2><div class="ph">
-<figure><img loading="lazy" src="https://www.geetadhamindia.com/wp-content/uploads/2020/02/Radha-Krishna-Temple-copy2-1.png" alt=""><figcaption>Radha Krishna Temple</figcaption></figure>
-<figure><img loading="lazy" src="https://www.geetadhamindia.com/wp-content/uploads/2020/02/Satsang-copy-2-768x330.png" alt=""><figcaption>Satsang</figcaption></figure>
-<figure><img loading="lazy" src="https://www.geetadhamindia.com/wp-content/uploads/2020/02/Meditation-Hall-copy2-1.png" alt=""><figcaption>Meditation Hall</figcaption></figure>
-<figure><img loading="lazy" src="https://www.geetadhamindia.com/wp-content/uploads/2020/02/Geeta-Discourses-copy-2-768x332.png" alt=""><figcaption>Geeta Discourses</figcaption></figure>
-<figure><img loading="lazy" src="https://www.geetadhamindia.com/wp-content/uploads/2020/02/GA-Mathuracopy.png" alt=""><figcaption>Geeta Ashram, Mathura</figcaption></figure>
-<figure><img loading="lazy" src="https://www.geetadhamindia.com/wp-content/uploads/2020/02/Harihareshwar-Mandir-copy2-1.png" alt=""><figcaption>Harihareshwar Mandir</figcaption></figure>
-</div><p><a class="l" href="https://www.geetadhamindia.com/photo-gallery/" target="_blank" rel="noopener">See the full gallery →</a></p></section>
+<section id="gallery" class="band b2"><div class="w"><h2>📸 Glimpses of Geeta Dham</h2><p style="margin-top:-8px">Swipe to see more →</p><div class="strip">
+<figure><img loading="lazy" src="https://www.geetadhamindia.com/wp-content/uploads/2020/02/Radha-Krishna-Temple-copy2-1.png" alt=""><figcaption>Radha Krishna Temple</figcaption></figure><figure><img loading="lazy" src="https://www.geetadhamindia.com/wp-content/uploads/2020/02/Raas-Leela-1-768x328.png" alt=""><figcaption>Raas Leela</figcaption></figure><figure><img loading="lazy" src="https://www.geetadhamindia.com/wp-content/uploads/2020/02/Student-Folk-Dance-1-768x327.png" alt=""><figcaption>Student Folk Dance</figcaption></figure><figure><img loading="lazy" src="https://www.geetadhamindia.com/wp-content/uploads/2020/02/Satsang-copy-2-768x330.png" alt=""><figcaption>Satsang</figcaption></figure><figure><img loading="lazy" src="https://www.geetadhamindia.com/wp-content/uploads/2020/02/MAHASHIVRATRI-an-all-night-celebration-with-deep-devotion-768x423.png" alt=""><figcaption>Mahashivratri</figcaption></figure><figure><img loading="lazy" src="https://www.geetadhamindia.com/wp-content/uploads/2020/02/Meditation-Hall-copy2-1.png" alt=""><figcaption>Meditation Hall</figcaption></figure><figure><img loading="lazy" src="https://www.geetadhamindia.com/wp-content/uploads/2020/02/Geeta-Yagya-copy2-768x324.png" alt=""><figcaption>Geeta Yagya</figcaption></figure><figure><img loading="lazy" src="https://www.geetadhamindia.com/wp-content/uploads/2020/02/Harihareshwar-Mandir-copy2-1.png" alt=""><figcaption>Harihareshwar Mandir</figcaption></figure><figure><img loading="lazy" src="https://www.geetadhamindia.com/wp-content/uploads/2020/02/GA-Mathuracopy.png" alt=""><figcaption>Geeta Ashram, Mathura</figcaption></figure>
+</div><p><a class="l" href="https://www.geetadhamindia.com/photo-gallery/" target="_blank" rel="noopener">See the full gallery →</a></p></div></section>
 
-<section id="listen"><h2>Listen &amp; Learn</h2><div class="g">
+<section id="listen" class="band b3"><div class="w"><h2>🎶 Listen &amp; Learn</h2><div class="g">
 <div class="c"><h3>Learn Chanting with Gurudev</h3><p>Recite the Sanskrit verses along with Gurudev.</p><audio controls preload="none" style="width:100%" src="https://www.geetadhamindia.com/wp-content/uploads/2020/02/GurudevAudio.mp3"></audio></div>
 <div class="c"><h3>YouTube Channel</h3><p>Pravachans and Geeta recitation.</p><a href="https://www.youtube.com/@bhagavadgeeta-rajukaramcha9923" target="_blank" rel="noopener">Watch now →</a></div>
 <div class="c"><h3>Gurudev's Pravachans</h3><p>Discourses hosted by Geeta Dham.</p><a href="https://www.geetadhamindia.com/gurudevs-pravachans/" target="_blank" rel="noopener">Listen →</a></div>
-<div class="c"><h3>All Links</h3><p>Everything in one place.</p><a href="https://linktr.ee/ZoomBhagavadGeeta" target="_blank" rel="noopener">Linktree →</a></div></div></section>
+<div class="c"><h3>All Links</h3><p>Everything in one place.</p><a href="https://linktr.ee/ZoomBhagavadGeeta" target="_blank" rel="noopener">Linktree →</a></div></div></div></section>
 
-<section id="zoom"><h2>Live Satsang on Zoom</h2><div class="g">
+<section id="zoom" class="band b4"><div class="w"><h2>💻 Live Satsang on Zoom</h2><div class="g">
 <div class="c"><h3>Vivek Ji · Geeta Ashram MN</h3><p>Sundays, 11:30am–12:30pm US Central</p><a href="https://us04web.zoom.us/j/8582502621" target="_blank" rel="noopener">Join Zoom →</a></div>
 <div class="c"><h3>Satya Kalra Ji</h3><p>Sundays, 8:30–9:30am US Pacific</p><a href="https://us02web.zoom.us/j/85370424865?pwd=U1ZIUkprUmc0Q2loSW01MDNWOHZXUT09" target="_blank" rel="noopener">Join Zoom →</a></div>
 <div class="c"><h3>Geeta Kiran Sharing</h3><p>Saturdays, 9:00am US Central</p><a href="https://us02web.zoom.us/j/81533325398?pwd=dU14YVJqTnlRL2lKQU5SVDFsTktyZz09" target="_blank" rel="noopener">Join Zoom →</a></div>
-<div class="c"><h3>Shakti Ji · Daily Samput Path</h3><p>Daily, 7:40pm Canada time</p><a href="https://us02web.zoom.us/j/3692299829?pwd=V0djSnNFMUFWQWlGNlp4QVlsMGMzUT09" target="_blank" rel="noopener">Join Zoom →</a></div></div></section>
+<div class="c"><h3>Shakti Ji · Daily Samput Path</h3><p>Daily, 7:40pm Canada time</p><a href="https://us02web.zoom.us/j/3692299829?pwd=V0djSnNFMUFWQWlGNlp4QVlsMGMzUT09" target="_blank" rel="noopener">Join Zoom →</a></div></div></div></section>
 
-<section id="ashrams"><h2>Geeta Ashram Directory</h2>
-<p style="color:var(--mut)">Visiting a city? Search below by city, state or country, then tap an ashram to see its contact details. Please call or write before you arrive.</p>
+<section id="ashrams" class="band b5"><div class="w"><h2>🛕 Geeta Ashram Directory</h2>
+<p style="color:var(--mut);margin-top:-6px">Visiting a city? Search by city, state or country, then tap an ashram to see its contact details. Please call or write before you arrive.</p>
 <input id="q" type="search" placeholder="🔍 Search city, state or country…" autocomplete="off">
+<div id="fl"><button class="on" data-f="all">All</button><button data-f="A">✅ Active</button><button data-f="I">🔄 Reconnect</button><button data-f="IN">🇮🇳 India</button><button data-f="AB">🌍 Abroad</button></div>
 <div id="dir"></div>
-<p class="note">Details are from our community records and may be outdated. Corrections are welcome: please write to Geeta Ashram HQ, Delhi (see Contact below).</p></section>
+<p class="note">Details are from our community records and may be outdated. Corrections are welcome: please write to Geeta Ashram HQ, Delhi (see Contact below).</p></div></section>
 
-<section id="seva"><h2>Seva Projects</h2><div class="g">
+<section id="seva" class="band b6"><div class="w"><h2>🐄 Seva Projects</h2><div class="g">
 <div class="c"><h3>Gaushala &amp; Gauseva</h3><a href="https://www.geetadhamindia.com/gaushala-and-gauseva/" target="_blank" rel="noopener">Read →</a></div>
 <div class="c"><h3>Gurukul Vidya Mandir</h3><a href="https://www.geetadhamindia.com/gurukul-overview/" target="_blank" rel="noopener">Read →</a></div>
 <div class="c"><h3>Community Welfare</h3><a href="https://www.geetadhamindia.com/community-welfare/" target="_blank" rel="noopener">Read →</a></div>
-<div class="c"><h3>Youth &amp; Retreats</h3><a href="https://www.geetadhamindia.com/youth-programmes/" target="_blank" rel="noopener">Read →</a></div></div></section>
+<div class="c"><h3>Youth &amp; Retreats</h3><a href="https://www.geetadhamindia.com/youth-programmes/" target="_blank" rel="noopener">Read →</a></div></div></div></section>
 
-<section id="donate"><div class="don"><h2>Donate · Seva</h2>
+<section id="donate" class="band b7"><div class="w don"><h2>🙏 Donate · Seva</h2>
 <p>To make a donation, please contact Geeta Ashram Headquarters, Delhi:</p>
-<p><b>Geeta Ashram HQ</b><br>Sadar Bazar, Delhi Cantt, New Delhi – 110010<br>
-📞 <a href="tel:+911125694380">+91 11 25694380</a> · <a href="tel:+911125693316">25693316</a><br>
-✉ <a href="mailto:adminhq@gagdhqtrs.in?subject=Donation">adminhq@gagdhqtrs.in</a></p>
-<a class="btn alt" href="mailto:adminhq@gagdhqtrs.in?subject=Donation%20enquiry">Email about donating</a></div></section>
+<p><b>Geeta Ashram HQ</b><br>Sadar Bazar, Delhi Cantt, New Delhi – 110010<br>📞 <a href="tel:+911125694380">+91 11 25694380</a> · <a href="tel:+911125693316">25693316</a><br>✉ <a href="mailto:adminhq@gagdhqtrs.in?subject=Donation">adminhq@gagdhqtrs.in</a></p>
+<a class="btn" href="mailto:adminhq@gagdhqtrs.in?subject=Donation%20enquiry">Email about donating</a></div></section>
 
-<section id="contact"><h2>Contact</h2><div class="g">
+<section id="contact" class="band b8"><div class="w"><h2>📞 Contact</h2><div class="g">
 <div class="c"><h3>Geeta Ashram HQ, Delhi</h3><p>Sadar Bazar, Delhi Cantt, New Delhi – 110010<br>For Geeta Ashram activities and enquiries<br>📞 +91 11 25694380, 25693316<br>✉ adminhq@gagdhqtrs.in</p><a href="tel:+911125694380">Call</a> · <a href="mailto:adminhq@gagdhqtrs.in">Email</a></div>
-<div class="c"><h3>Geeta Dham, Tinwari</h3><p>Village Bada Kotecha, Tinwari 342396, Jodhpur, Rajasthan<br>For Geeta Dham activities and retreats<br>📞 +91 74260 85701<br>✉ admin@geetadhamtinwari.in</p><a href="tel:+917426085701">Call</a> · <a href="mailto:admin@geetadhamtinwari.in">Email</a></div></div></section>
-<footer>🙏 Jai Shri Krishna · Jai Gurudev 🙏<br>Unofficial community site. Official site: <a class="l" href="https://www.geetadhamindia.com" target="_blank" rel="noopener">geetadhamindia.com</a></footer>
-</div>
+<div class="c"><h3>Geeta Dham, Tinwari</h3><p>Village Bada Kotecha, Tinwari 342396, Jodhpur, Rajasthan<br>For Geeta Dham activities and retreats<br>📞 +91 74260 85701<br>✉ admin@geetadhamtinwari.in</p><a href="tel:+917426085701">Call</a> · <a href="mailto:admin@geetadhamtinwari.in">Email</a></div></div></div></section>
+<footer>🙏 Jai Shri Krishna · Jai Gurudev 🙏<br>Unofficial community site. Official site: <a href="https://www.geetadhamindia.com" target="_blank" rel="noopener">geetadhamindia.com</a></footer>
 <audio id="aud" loop preload="none" src="https://www.geetadhamindia.com/wp-content/uploads/2020/02/GurudevAudio.mp3"></audio>
 <button id="mus">🎵 Play devotional chant</button>
+<script src="ashrams.js"></script>
 <script>
-var D=[{"t":"Delhi (Headquarters)","l":"Delhi, India","s":"A","g":"I","c":"Swami Guru Maa Geeteshwari","a":"Geeta Ashram Headquarters, Sadar Bazar, Delhi Cantt., New Delhi 110010","p":"9958545353 / 9810643382 / 011-25694380 / 011-25693316","e":"adminhq@gagdhqtrs.in / guruji64@hotmail.com","w":""},{"t":"Baroda","l":"Baroda (Vadodara), Gujarat, India","s":"A","g":"I","c":"Harsha","a":"Geeta Ashram, 25, Rajendra Society, Manjal Pur, Baroda, Gujarat","p":"9824661447","e":"laveenakaram@yahoo.com","w":""},{"t":"Faridabad","l":"Faridabad, Haryana, India","s":"A","g":"I","c":"Jindu Ram Ji","a":"Geeta Ashram, Near Old Railway Station (NIT), Faridabad, Haryana","p":"9810001441 / 9899037525 / 0129-2413287 / 09810509524","e":"","w":""},{"t":"Jaipur","l":"Jaipur, Rajasthan, India","s":"A","g":"I","c":"Ramesh Khemlani","a":"Geeta Ashram, Ajmer Road, Sodala, Jaipur, Rajasthan","p":"0141-2709478 / 0141-202282 / 9920845932","e":"","w":""},{"t":"Jaisalmer","l":"Jaisalmer, Rajasthan, India","s":"A","g":"I","c":"Kalla","a":"Geeta Ashram, Amar Sagar Pol ke Bahar, Jaisalmer, Rajasthan","p":"9214063324","e":"dharmendra82kalla@gmail.com","w":""},{"t":"Jatt, Maharashtra","l":"Jath (Sangli), Maharashtra, India","s":"A","g":"I","c":"","a":"Geeta Ashram, Mangalwar Path, Sangali, Jath, Maharashtra","p":"8208964970","e":"ramchandramali1940@gmail.com","w":""},{"t":"Jodhpur","l":"Jodhpur City, Rajasthan, India","s":"A","g":"I","c":"Dinesh & Roshanlal","a":"Geeta Ashram, Chand Darwaje ke Bahar, Ustrawahini Mandir, Jodhpur City, Rajasthan","p":"9460589962","e":"","w":""},{"t":"Jodhpur (Geeta Dham)","l":"Tinwari, Jodhpur, Rajasthan, India","s":"A","g":"I","c":"Pannia","a":"Geeta Dham, Village Bada Kotecha, Tinwari 342396, Jodhpur, Rajasthan","p":"9950733078 / 7426085701","e":"admin@geetadhamtinwari.in","w":""},{"t":"Kanpur","l":"Kanpur, Uttar Pradesh, India","s":"A","g":"I","c":"Ram Gupta","a":"Geeta Ashram, 28, Geeta Kripa, Sarvodaya Nagar, Kanpur, Uttar Pradesh","p":"9580504700 / 9415125033 / 0512-2237710 / 0512-2240044","e":"","w":""},{"t":"Kanpur","l":"Kanpur, Uttar Pradesh, India","s":"A","g":"I","c":"Shiv Kant Panday","a":"","p":"","e":"","w":""},{"t":"Meerut","l":"Meerut, Uttar Pradesh, India","s":"A","g":"I","c":"Bhati","a":"Geeta Ashram, Tilak Road, Meerut, Uttar Pradesh","p":"9412551981","e":"","w":""},{"t":"Mumbai","l":"Mumbai, Maharashtra, India","s":"A","g":"I","c":"Alka Ambo","a":"Geeta Ashram, 12-Sea Glimpse, Worli Hill Road, Worli, Mumbai, Maharashtra","p":"9820623456 / 022-24938229 / 022-24934697","e":"alkaambo@yahoo.com","w":""},{"t":"Noida","l":"Noida, Uttar Pradesh, India","s":"A","g":"I","c":"Pushpa Baijal","a":"C-2/68, Sector-36, Noida 201303, Uttar Pradesh","p":"9899011010 / 0120-2573634","e":"pbaijal@hotmail.com","w":""},{"t":"Pune","l":"Pune, Maharashtra, India","s":"A","g":"I","c":"Rajiv Sattur","a":"F-12, Shirine Garden, ITI Road, Aundh, Pune 411007, Maharashtra","p":"9822616210","e":"nishiramant@gmail.com","w":""},{"t":"Abu Dhabi","l":"Abu Dhabi, UAE","s":"A","g":"W","c":"Jagdesh Naudiyal","a":"","p":"","e":"","w":""},{"t":"Atlanta","l":"Atlanta, USA","s":"A","g":"W","c":"Vashi Nanani","a":"","p":"","e":"","w":""},{"t":"Calgary","l":"Calgary, Canada","s":"A","g":"W","c":"Amar Wadwani","a":"","p":"","e":"","w":""},{"t":"Chicago","l":"Chicago, Illinois, USA","s":"A","g":"W","c":"Joshi Ji","a":"Geeta Ashram, 901 University Avenue, Matteson, Illinois 60443, USA","p":"+1-708-799-3422 / +1-708-799-9050","e":"joshiblg@hotmail.com","w":""},{"t":"Dubai","l":"Dubai, UAE","s":"A","g":"W","c":"Vinod Kumar","a":"","p":"","e":"","w":""},{"t":"Evansville","l":"Evansville, Indiana, USA","s":"A","g":"W","c":"","a":"","p":"","e":"","w":""},{"t":"Houston","l":"Houston, Texas, USA","s":"A","g":"W","c":"Pradip Seernani","a":"","p":"","e":"","w":""},{"t":"Jakarta, Indonesia","l":"Jakarta, Indonesia","s":"A","g":"W","c":"Reshma Mohan Dinan","a":"Geeta Ashram, Jalan Pasuruan No. 13, P.O. Box 4800, Jakarta, Indonesia","p":"+62-21-3807925","e":"kartika@cbnmail.com","w":""},{"t":"Lagos","l":"Lagos, Nigeria","s":"A","g":"W","c":"Piyush","a":"Geeta Ashram, Plot 12, Block 55, Gbagada Phase-1, Lagos, Nigeria","p":"+234-1-7151971 / +234-802-3056545","e":"pbmrymy@gmail.com","w":""},{"t":"Las Palmas","l":"Las Palmas, Spain","s":"A","g":"W","c":"Prakash","a":"","p":"","e":"","w":""},{"t":"Lima, Peru","l":"Lima, Peru","s":"A","g":"W","c":"Kishore","a":"","p":"+51-1-4472332","e":"mirpurilakha@hotmail.com","w":""},{"t":"London","l":"London, UK","s":"A","g":"W","c":"Gope Nandwani","a":"Geeta Ashram, Greenacres House, Heathbourne Road, Bushey Heath, Herts, England","p":"","e":"tefel@aol.com","w":""},{"t":"Long Island","l":"Long Island, New York, USA","s":"A","g":"W","c":"Narinder Kapoor","a":"Geeta Ashram, 136 Colony Lane, Syosset, NY 11791, USA","p":"+1-516-991-3001","e":"nandkapoor@hotmail.com","w":""},{"t":"Los Angeles","l":"Los Angeles, California, USA","s":"A","g":"W","c":"Arvind Bhatnagar","a":"","p":"","e":"","w":""},{"t":"Malaysia","l":"Malaysia","s":"A","g":"W","c":"Ashok / Chandru","a":"","p":"","e":"","w":""},{"t":"Miami","l":"Miami, Florida, USA","s":"A","g":"W","c":"Rakhi","a":"","p":"","e":"","w":""},{"t":"Minnesota","l":"Minnesota, USA","s":"A","g":"W","c":"Vivek Kamran","a":"Geeta Ashram, 5057 Noble Avenue, Brooklyn Park, MN 55443, USA","p":"+1-651-645-9827","e":"Vivekkomal108@msn.com","w":"www.geetaashrammn.org"},{"t":"Panama","l":"Panama","s":"A","g":"W","c":"Ishwar Anandani","a":"Geeta Ashram, Calle 16 Ave. Roosevelt, Importadora Amigo SA, Zona Libre, Colon, Panama","p":"+507-609-0094","e":"ramanandp@hotmail.com","w":""},{"t":"Penang, Malaysia","l":"Penang, Malaysia","s":"A","g":"W","c":"Dr. Danesh","a":"Geeta Ashram, No. 3, Tanjong Bunga Park, Tanjong Tokong, 4 Jalan Mekanro, Penang 11208, Malaysia","p":"+60-4-012480636 / +60-4-89901143","e":"daneshkamal1965@gmail.com / vkkalra@gmail.com","w":""},{"t":"San Diego","l":"San Diego, California, USA","s":"A","g":"W","c":"Ravi Malkani","a":"","p":"","e":"","w":""},{"t":"San Francisco","l":"San Francisco, California, USA","s":"A","g":"W","c":"Satya Kalra","a":"","p":"","e":"","w":""},{"t":"Singapore","l":"Singapore","s":"A","g":"W","c":"Suresh Ranga & Suresh Shukla","a":"Geeta Ashram, 119 Hill Street, Singapore","p":"+65-6472-1986","e":"shree@singnet.com.sg","w":"www.geetaashram.sg"},{"t":"Tenerife","l":"Tenerife, Spain","s":"A","g":"W","c":"Preeti & Vinod","a":"Geeta Ashram, Calle Perez Galdos No. 20, 4th Floor, Santa Cruz de Tenerife 38003, Canary Islands, Spain","p":"+34-922-248517 / +34-922-225853","e":"pvnathani@hotmail.com","w":""},{"t":"Thailand","l":"Bangkok, Thailand","s":"A","g":"W","c":"Mrs. Agarwal","a":"Geeta Ashram, Sukhumvit Soi 50, C-Oum Apartment, Phra Khanong, Bangkok 10210, Thailand","p":"+66-2-2519531 / +66-2-2911967","e":"tiwari_anuch@hotmail.com","w":"www.geetaashramthailand.com"},{"t":"Toronto","l":"Toronto, Canada","s":"A","g":"W","c":"Pratab Purohit","a":"","p":"","e":"","w":""},{"t":"Tucson","l":"Tucson, Arizona, USA","s":"A","g":"W","c":"Sumanesh Agarwal","a":"","p":"","e":"","w":""},{"t":"Vancouver","l":"Vancouver, Canada","s":"A","g":"W","c":"Laveena Karamchandani","a":"","p":"","e":"","w":""},{"t":"Ahmedabad","l":"Ahmedabad, Gujarat, India","s":"I","g":"I","c":"","a":"Last known: B/7/92, Goyal Intercity, Near SAL Hospital, Drive-in Road, Thaltej, Ahmedabad 380054 (Sh. Sanjay Vakta & Smt. Sujata Vakta)","p":"9099920020","e":"Sujata-vakta@yahoo.com","w":""},{"t":"Allahabad (Prayagraj)","l":"Allahabad, Uttar Pradesh, India","s":"I","g":"I","c":"","a":"Last known: Bhargava Engineer, Mahatma Gandhi Road, Allahabad, Uttar Pradesh","p":"0532-2602893 / 0532-2604260","e":"","w":""},{"t":"Bangalore","l":"Bangalore, Karnataka, India","s":"I","g":"I","c":"","a":"","p":"","e":"","w":""},{"t":"Chennai","l":"Chennai, Tamil Nadu, India","s":"I","g":"I","c":"","a":"","p":"","e":"","w":""},{"t":"Dehradun","l":"Dehradun, Uttarakhand, India","s":"I","g":"I","c":"","a":"Last known: 37 Mandir Lane, South Vanathali, Ballupur, Dehradun, Uttarakhand (Shri Sachidanand Joshi Ji)","p":"0135-3090464 / 09897044557","e":"sachida8@hotmail.com","w":""},{"t":"Gurugram","l":"Gurugram, Haryana, India","s":"I","g":"I","c":"","a":"","p":"","e":"","w":""},{"t":"Kapurthala","l":"Kapurthala, Punjab, India","s":"I","g":"I","c":"","a":"Last known: Paramjeet Ganj, Railway Station, Kapurthala, Punjab (Shri Balveer Ji / Shri Sanjeev Chopra Ji)","p":"9780923100 / 9868504041","e":"choprasanjeev@gmail.com","w":""},{"t":"Patna","l":"Patna, Bihar, India","s":"I","g":"I","c":"","a":"","p":"","e":"","w":""},{"t":"Ranchi","l":"Ranchi, Jharkhand, India","s":"I","g":"I","c":"","a":"Last known: Village Jagannathpur, Dhurwa, Ranchi-4, Jharkhand (Thakur Radhey Shyam Nath Mahadev)","p":"","e":"","w":""},{"t":"Solan","l":"Solan, Himachal Pradesh, India","s":"I","g":"I","c":"","a":"","p":"","e":"","w":""},{"t":"Udaipur","l":"Udaipur, Rajasthan, India","s":"I","g":"I","c":"","a":"Last known: 225 Moti Magari Scheme, Udaipur, Rajasthan (Shri Shiv Rattan Tiwari)","p":"9414167357","e":"","w":""},{"t":"Abidjan","l":"Abidjan, Ivory Coast","s":"I","g":"W","c":"","a":"Last known: 32 BP 633, Abidjan-32, Ivory Coast (Mr. K. Bilson & Pandit Vipin Bihari Upadhyay)","p":"","e":"","w":""},{"t":"Accra (Ghana)","l":"Accra, Ghana","s":"I","g":"W","c":"","a":"","p":"","e":"","w":""},{"t":"Ajman","l":"Ajman, UAE","s":"I","g":"W","c":"","a":"","p":"","e":"","w":""},{"t":"Chile","l":"Chile","s":"I","g":"W","c":"","a":"","p":"","e":"","w":""},{"t":"Kenya","l":"Kenya","s":"I","g":"W","c":"","a":"","p":"","e":"","w":""},{"t":"Mauritius","l":"Mauritius","s":"I","g":"W","c":"","a":"","p":"","e":"","w":""},{"t":"Monrovia (Liberia)","l":"Monrovia, Liberia","s":"I","g":"W","c":"","a":"","p":"","e":"","w":""},{"t":"Oman","l":"Oman","s":"I","g":"W","c":"","a":"","p":"","e":"","w":""},{"t":"Philippines","l":"Philippines","s":"I","g":"W","c":"","a":"","p":"","e":"","w":""},{"t":"Sharjah","l":"Sharjah, UAE","s":"I","g":"W","c":"","a":"","p":"","e":"","w":""},{"t":"Sydney","l":"Sydney, Australia","s":"I","g":"W","c":"","a":"","p":"","e":"","w":""}];
+window.D=window.D||[];
 function E(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;')}
 function tel(p){var d=p.replace(/[^0-9+]/g,'');if(/^[6-9][0-9]{9}$/.test(d))d='+91'+d;else if(/^0[6-9][0-9]{9}$/.test(d))d='+91'+d.slice(1);return d}
 function card(x){var t='Geeta Ashram '+x.t+(x.c?' \u2013 '+x.c:''),b='';
@@ -116,16 +125,19 @@ if(x.w)b+='<div>\ud83c\udf10 <a target="_blank" rel="noopener" href="https://'+E
 if(!b)b='<div>Contact details are not yet available. Please ask Geeta Ashram HQ, Delhi: <a href="tel:+911125694380">+91 11 25694380</a> \u00b7 <a href="mailto:adminhq@gagdhqtrs.in">adminhq@gagdhqtrs.in</a></div>';
 if(x.s=='I')b+='<div><i>Not currently active. Can you help reconnect this ashram with Geeta Ashram HQ, Delhi?</i></div>';
 return '<details data-k="'+E((x.t+' '+x.l+' '+x.c+' '+x.a).toLowerCase())+'"><summary>'+E(t)+'<small>'+E(x.l)+'</small></summary><div class="dt">'+b+'</div></details>'}
+var F='all';
 var G=[['A','I','\u2705 Active Geeta Ashrams \u2013 India'],['A','W','\u2705 Active Geeta Ashrams \u2013 Abroad'],['I','I','\ud83d\udd04 Not currently active \u2013 India'],['I','W','\ud83d\udd04 Not currently active \u2013 Abroad']];
 function R(){var q=document.getElementById('q').value.trim().toLowerCase(),o='';
-G.forEach(function(g){var L=D.filter(function(x){return x.s==g[0]&&x.g==g[1]});
-if(g[0]=='I')var sub='<small> \u00b7 Previously connected. Help us bring them back.</small>';else sub='';
-var h=L.map(card).join('');o+='<div class="grp"><h3 class="gh">'+g[2]+' ('+L.length+')<br>'+sub+'</h3>'+h+'</div>'});
+G.forEach(function(g){if(F=='A'&&g[0]!='A'||F=='I'&&g[0]!='I'||F=='IN'&&g[1]!='I'||F=='AB'&&g[1]!='W')return;
+var L=D.filter(function(x){return x.s==g[0]&&x.g==g[1]});
+var sub=g[0]=='I'?'<small> \u00b7 Previously connected. Help us bring them back.</small>':'';
+o+='<div class="grp '+(g[0]=='A'?'a':'i')+'"><h3 class="gh">'+g[2]+' ('+L.length+')<br>'+sub+'</h3>'+L.map(card).join('')+'</div>'});
 var d=document.getElementById('dir');d.innerHTML=o;
 if(q){var n=0;d.querySelectorAll('details').forEach(function(e){if(e.getAttribute('data-k').indexOf(q)<0)e.style.display='none';else{e.open=true;n++}});
 d.querySelectorAll('.grp').forEach(function(g){if(!g.querySelector('details:not([style*="none"])'))g.style.display='none'});
 if(!n)d.innerHTML='<p class="note">No ashram found for "'+E(q)+'". Please contact Geeta Ashram HQ, Delhi.</p>'}}
-document.getElementById('q').oninput=R;R();
+document.getElementById('q').oninput=R;
+document.querySelectorAll('#fl button').forEach(function(b){b.onclick=function(){F=b.getAttribute('data-f');document.querySelectorAll('#fl button').forEach(function(x){x.className=x==b?'on':''});R()}});R();
 var a=document.getElementById('aud'),m=document.getElementById('mus');
 m.onclick=function(){if(a.paused){a.play().then(function(){m.textContent='⏸ Pause chant'}).catch(function(){})}else{a.pause();m.textContent='🎵 Play devotional chant'}};
 document.getElementById('share').onclick=async function(){var d={title:document.title,text:'Bhagavad Geeta Hub 🙏',url:location.href};
