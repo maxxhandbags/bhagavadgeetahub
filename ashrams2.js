@@ -35,3 +35,4 @@ D=D.concat([
 {"t":"Sharjah","l":"Sharjah, UAE","s":"I","g":"W","c":"","a":"","p":"","e":"","w":""},
 {"t":"Sydney","l":"Sydney, Australia","s":"I","g":"W","c":"","a":"","p":"","e":"","w":""}
 ]);
+document.write('<script src="ashrams3.js"><\/script>');
