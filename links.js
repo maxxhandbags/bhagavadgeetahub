@@ -19,19 +19,4 @@ function show(){var i=(((d+o)%n)+n)%n;document.getElementById("tdc").innerHTML=c
 document.getElementById("tdn").onclick=function(){o++;show()};show();
 });
 })();
-(function(){
-var s=document.createElement("style");
-s.textContent=".ml h3{margin:18px 0 8px;font-size:18px;color:var(--ac2)}.ml .chips{display:flex;flex-wrap:wrap;gap:8px}.ml .chips a{padding:9px 15px;border-radius:99px;background:#fff;border:2px solid #d9c8ff;color:#5b3fb0;font:800 14px system-ui,sans-serif;text-decoration:none}";
-document.head.appendChild(s);
-var G=[["\ud83c\udfac Videos & Conferences",[["Geeta Conference 2022","https://bit.ly/34fBmX6"],["More conference playlists (2023\u20132025), Moments of Miracle","https://linktr.ee/ZoomBhagavadGeeta"]]],
-["\u25b6 YouTube",[["Swami Harihar Ji channel","https://youtube.com/channel/UCZYjntRXT6e7gsINRBZVvyg"],["Geeta Dham India","https://youtube.com/channel/UCH3rwwqbzKdTgzWz31WwKrA"],["Geeta Ashram Delhi HQ","https://youtu.be/TYwCJlUeBPQ"],["Satya Ji","https://youtube.com/c/SATYAKALRA"],["Geeta Ashram Peru","https://youtube.com/c/GeetaAshramPeru"]]],
-["\ud83d\udc4d Facebook",[["Geeta Dham News","https://www.facebook.com/geetadhamtinwari/"],["Delhi GuruMaa","https://www.facebook.com/GeetaAshramIn/"],["Las Palmas","https://www.facebook.com/groups/318696682601/"],["Malaysia","https://www.facebook.com/geetaashramyouthmalaysia/"],["Thailand","https://www.facebook.com/groups/geetaashramthailand/"],["New York","https://www.facebook.com/profile.php?id=61585774407396"],["Tenerife","https://www.facebook.com/profile.php?id=100079744565148"]]],
-["\ud83c\udf10 Websites & Tools",[["Geeta Dham India","https://www.geetadhamindia.com/"],["GuruMaa's Page","https://linktr.ee/GuruMaaBhagavadGeeta"],["GitaGPT Q&A","https://bhagavadgita.com/gitagpt"],["Time Zone Converter","https://www.timeanddate.com/worldclock/converter-classic.html"],["New Jersey Geeta Satsang","https://geetasatsang.org"],["Malaysia","https://www.geetamalaysia.org/"],["Malaysia Youth","https://geetaashramyouth.com/"],["Minnesota","https://geetaashrammn.org/"],["Los Angeles","https://linktr.ee/Geetaashramla"]]]];
-window.addEventListener("load",function(){
-var h='<div class="w ml"><h2>\ud83d\udd17 More Links</h2>';
-G.forEach(function(g){h+="<h3>"+g[0]+'</h3><div class="chips">'+g[1].map(function(l){return '<a target="_blank" rel="noopener" href="'+l[1]+'">'+l[0].replace("&","&amp;")+"</a>"}).join("")+"</div>"});
-h+='<h3>\ud83d\udce9 Website questions</h3><p style="color:var(--mut)">For donations, please contact Geeta Ashram HQ, Delhi, and Geeta Dham (see above). Website host: Raju Karamchandani, <a href="mailto:Jskjgdgita@gmail.com" style="color:#0e7490;font-weight:800">Jskjgdgita@gmail.com</a>. President: <a href="mailto:presidentgd@gagdhqtrs.in" style="color:#0e7490;font-weight:800">presidentgd@gagdhqtrs.in</a></p></div>';
-var sec=document.createElement("section");sec.className="band b2";sec.id="morelinks";sec.innerHTML=h;
-var sv=document.getElementById("seva");sv.parentNode.insertBefore(sec,sv);
-});
-})();
+document.write('<script src="links2.js"><\/script>');
