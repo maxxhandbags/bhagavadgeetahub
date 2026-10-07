@@ -19,4 +19,4 @@ function show(){var i=(((d+o)%n)+n)%n;document.getElementById("tdc").innerHTML=c
 document.getElementById("tdn").onclick=function(){o++;show()};show();
 });
 })();
-document.write('<script src="daily.js"><\/script>');
+document.write('<script src="extras.js"><\/script>');
