@@ -12,7 +12,7 @@ var k=document.createElement("div");k.className="sunwrap kr";var c3=document.cre
 var ai=document.querySelector("#about .two img");
 if(ai){var c2=document.createElement("div");c2.className="cp big";ai.parentNode.insertBefore(c2,ai);c2.appendChild(ai);ai.src=P1}
 var sb=h.querySelector(".sub");
-if(sb){var p=document.createElement("p");p.className="sunline";p.innerHTML="\ud83c\udf1e As the sun gives light to the whole universe, the Bhagavad Geeta gives light to every soul.<small>18 RAYS \u00b7 18 CHAPTERS OF THE BHAGAVAD GEETA</small>";sb.parentNode.insertBefore(p,sb.nextSibling)}
+if(sb){var p=document.createElement("p");p.className="sunline";p.innerHTML="\ud83c\udf1e The Sun is for all - so is Bhagavad Geeta<small>18 RAYS \u00b7 18 CHAPTERS OF THE BHAGAVAD GEETA</small>";sb.parentNode.insertBefore(p,sb.nextSibling)}
 setTimeout(function(){var a=document.getElementById("ask"),sl=h.querySelector(".sunline");if(a&&sl)sl.parentNode.insertBefore(a,sl.nextSibling)},0);
 });
 })();
