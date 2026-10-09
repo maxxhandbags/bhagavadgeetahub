@@ -20,17 +20,4 @@ if(m&&a){m.textContent="\ud83c\udfb5 Play Gurudev's Pravachan";m.onclick=functio
 var hs=document.querySelectorAll("#listen .c h3"),i,p;
 for(i=0;i<hs.length;i++){if(/Learn Chanting/.test(hs[i].textContent)){hs[i].textContent="Gurudev's Pravachan";p=hs[i].nextElementSibling;if(p)p.textContent="Listen to Gurudev's pravachan."}}
 });
-window.addEventListener("load",function(){
-var h=document.querySelector(".hero");if(!h)return;
-var PH="Screenshot_20261008_014016_Samsung%20Browser.jpg";
-var st=document.createElement("style");
-st.textContent=".hero{background:radial-gradient(circle at 50% 24%,#fffbe0 0,#ffe27a 20%,#ffc9d6 58%,#e6dcff 100%)!important}.sunwrap{position:relative;width:min(82vw,330px);height:min(82vw,330px);margin:0 auto 6px;display:flex;align-items:center;justify-content:center}.sunwrap:before{content:'';position:absolute;inset:-14%;border-radius:50%;background:repeating-conic-gradient(#ffd23fdd 0 8deg,transparent 8deg 20deg);-webkit-mask:radial-gradient(circle,transparent 34%,#000 40%,transparent 72%);mask:radial-gradient(circle,transparent 34%,#000 40%,transparent 72%);animation:sunspin 50s linear infinite}.sunwrap:after{content:'';position:absolute;inset:6%;border-radius:50%;background:radial-gradient(circle,#fffef0 0,#ffe98a 45%,#ffb70388 66%,transparent 72%)}.cp{position:relative;z-index:2;width:200px;height:200px;border-radius:50%;overflow:hidden;border:6px solid #fff;box-shadow:0 0 0 6px #ffd23f,0 10px 30px #b4690080;background:#fff}.cp.big{width:min(100%,240px);height:auto;aspect-ratio:1/1;margin:auto}.cp img{width:100%!important;height:100%!important;max-width:none!important;border:0!important;border-radius:0!important;box-shadow:none!important;animation:none!important;object-fit:cover!important;object-position:50% 50%!important;transform:scale(1.38);display:block;filter:brightness(1.3) contrast(1.05) saturate(1.1)}.sunline{font:italic 600 17px/1.5 Georgia,serif;color:#8a2b0f;margin:4px auto 14px;max-width:560px}.sunline small{display:block;font:700 13px system-ui,sans-serif;letter-spacing:.06em;color:#b4457a}@keyframes sunspin{to{transform:rotate(360deg)}}@media(prefers-reduced-motion:reduce){.sunwrap:before{animation:none}}";
-document.head.appendChild(st);
-var im=h.querySelector("img");
-if(im){var w=document.createElement("div");w.className="sunwrap";im.parentNode.insertBefore(w,im);var c=document.createElement("div");c.className="cp";w.appendChild(c);c.appendChild(im);im.src=PH}
-var ai=document.querySelector("#about .two img");
-if(ai){var c2=document.createElement("div");c2.className="cp big";ai.parentNode.insertBefore(c2,ai);c2.appendChild(ai);ai.src=PH}
-var sb=h.querySelector(".sub");
-if(sb){var p=document.createElement("p");p.className="sunline";p.innerHTML="\ud83c\udf1e As the sun gives light to the whole universe, the Bhagavad Geeta gives light to every soul.<small>18 RAYS \u00b7 18 CHAPTERS OF THE BHAGAVAD GEETA</small>";sb.parentNode.insertBefore(p,sb.nextSibling)}
-});
-document.write('<script src="daily.js"><\/script><script src="reg.js"><\/script>');
+document.write('<script src="hero.js"><\/script><script src="daily.js"><\/script><script src="reg.js"><\/script>');
