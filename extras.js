@@ -20,4 +20,6 @@ if(m&&a){m.textContent="\ud83c\udfb5 Play Gurudev's Pravachan";m.onclick=functio
 var hs=document.querySelectorAll("#listen .c h3"),i,p;
 for(i=0;i<hs.length;i++){if(/Learn Chanting/.test(hs[i].textContent)){hs[i].textContent="Gurudev's Pravachan";p=hs[i].nextElementSibling;if(p)p.textContent="Listen to Gurudev's pravachan."}}
 });
-document.write('<script src="hero.js"><\/script><script src="daily.js"><\/script><script src="reg.js"><\/script>');
+if(window.LK&&LK["San Francisco"])LK["San Francisco"].push(["\ud83c\udfa7 Audiobook","https://bhagavadgeetahub.org/audiobook.html"]);
+(function(){var m=/[?&]ashram=([^&]+)/.exec(location.search);if(!m)return;var q=decodeURIComponent(m[1]).toLowerCase();
+window.addEventListener("load",function(){setTimeout(function(){var i,
