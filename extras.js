@@ -20,4 +20,13 @@ if(m&&a){m.textContent="\ud83c\udfb5 Play Gurudev's Pravachan";m.onclick=functio
 var hs=document.querySelectorAll("#listen .c h3"),i,p;
 for(i=0;i<hs.length;i++){if(/Learn Chanting/.test(hs[i].textContent)){hs[i].textContent="Gurudev's Pravachan";p=hs[i].nextElementSibling;if(p)p.textContent="Listen to Gurudev's pravachan."}}
 });
+window.addEventListener("load",function(){
+var ab=document.getElementById("about");
+if(ab){var sec=document.createElement("section");sec.id="audiobook";
+sec.innerHTML='<div style="background:linear-gradient(135deg,#312e81,#7c3aed 55%,#db2777);color:#fff;text-align:center;padding:34px 18px"><div style="max-width:620px;margin:0 auto"><div style="font:900 13px system-ui,sans-serif;letter-spacing:.12em;color:#ffe08a">NEW \u00b7 FREE \u00b7 ALL 18 CHAPTERS</div><h2 style="color:#fff;margin:6px 0 8px;font-size:clamp(26px,7vw,38px);text-shadow:0 2px 10px #0006">\ud83c\udfa7 Bhagavad Geeta Audiobook</h2><p style="margin:0 0 6px;font-size:18px">Recitation by His Holiness Shree 1008 Swami Harihar Ji Maharaj</p><p style="margin:0 0 18px;font:16px/1.5 system-ui,sans-serif;opacity:.95">Choose any chapter, tap any verse, and listen. All 700 verses, one tap away.</p><a href="audiobook.html" style="display:inline-block;padding:16px 34px;border-radius:99px;background:linear-gradient(135deg,#ffe08a,#ffb703);color:#4a1d00;font:900 19px system-ui,sans-serif;text-decoration:none;box-shadow:0 0 0 6px #ffffff33,0 8px 24px #0006">\u25b6 Open the Audiobook</a></div></div>';
+ab.parentNode.insertBefore(sec,ab.nextSibling)}
+setTimeout(function(){var sb=document.querySelector(".hero .sub");
+if(sb)sb.innerHTML="His Holiness Shree 1008 Swami Harihar Ji Maharaj (1899\u20132000)<br>\ud83e\udeb7 Jai Shri Krishna \u00b7 Jai Gurudev \ud83e\udeb7";
+document.title="Bhagavad Geeta Hub \u2013 His Holiness Shree 1008 Swami Harihar Ji Maharaj"},150);
+});
 document.write('<script src="hero.js"><\/script><script src="daily.js"><\/script><script src="reg.js"><\/script>');
