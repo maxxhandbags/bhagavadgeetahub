@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bhagavad Gita Audiobook</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#27dde0;--cream:#faf0d2;--tan:#d9b99b;--navy:#1a1a6e;--gold:#7aa56b}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:#1b1b1b;font-family:Georgia,'Times New Roman',serif;color:var(--navy)}
+#app{max-width:480px;margin:0 auto;min-height:100vh;background:var(--bg);position:relative;padding-bottom:90px}
+.page{display:none}.page.on{display:block}
+#splash{background:linear-gradient(#1a1a6e,#3b2a8c 60%,#e8a33d);min-height:100vh;text-align:center;color:#fff;padding:20px}
+#splash h1{font-weight:normal;margin:10px 0 0;font-size:28px}
+#splash p{opacity:.85}
+#enter{margin-top:14px;padding:14px 34px;font-size:18px;border-radius:30px;border:2px solid #f6d27a;background:rgba(255,255,255,.12);color:#fff;font-family:inherit}
+.top{display:flex;justify-content:flex-end;align-items:center;padding:12px 16px 0;color:#fff;gap:8px}
+.sw{width:50px;height:26px;border-radius:14px;background:#bff3f4;position:relative;cursor:pointer;border:2px solid #fff}
+.sw i{position:absolute;top:2px;left:2px;width:18px;height:18px;border-radius:50%;background:#2aa9ad;transition:.2s}
+.sw.on i{left:26px}
+.tabs{display:flex;margin-top:6px}
+.tabs div{flex:1;text-align:center;padding:12px;font-size:22px;color:#33406f;border-bottom:3px solid transparent}
+.tabs div.on{color:var(--navy);font-weight:bold;border-color:#fff}
+.frame{margin:8px;border:3px double var(--gold);border-radius:6px;padding:14px 10px;min-height:60vh}
+.title{margin:6px auto 18px;width:76%;text-align:center;background:var(--cream);border:2px solid var(--gold);padding:10px;font-style:italic;font-size:22px}
+.back{color:#fff;font-size:18px;cursor:pointer}
+h2{text-align:center;font-weight:normal;font-size:30px;margin:4px 0 16px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.card{background:var(--cream);border:1px solid var(--gold);border-radius:12px;padding:8px 4px;text-align:center;font-size:14px;min-height:112px;cursor:pointer}
+.card b{display:inline-block;width:38px;height:38px;line-height:34px;background:var(--tan);border:3px solid var(--gold);margin-bottom:6px;font-size:20px}
+.card.cur{outline:3px solid var(--navy)}
+.verses{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.v{width:46px;height:46px;line-height:40px;text-align:center;font-size:19px;border:3px solid var(--gold);cursor:pointer;background:var(--cream)}
+.v.alt{background:var(--tan)}
+.v.cur{background:var(--navy);color:#fff}
+#bar{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:480px;background:var(--navy);color:#fff;padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));display:none;align-items:center;gap:12px}
+#bar.on{display:flex}
+#bar button{background:var(--cream);border:0;border-radius:50%;width:40px;height:40px;font-size:16px;color:var(--navy)}
+#info{flex:1;font-size:14px}
+#msg{font-size:12px;color:#fff;text-align:center;padding:6px 14px}
+</style></head><body>
+<div id="app">
+
+<!-- PAGE 1: raga + Krishna -->
+<div id="splash" class="page on">
+<svg viewBox="0 0 300 300" width="300" style="max-width:90%">
+ <circle cx="150" cy="150" r="140" fill="#f6d27a" opacity=".25"/>
+ <g><animateTransform attributeName="transform" type="rotate" values="0 150 150;2 150 150;0 150 150;-2 150 150;0 150 150" dur="4s" repeatCount="indefinite"/>
+ <path d="M95 90 Q150 20 205 90 L195 100 Q150 50 105 100Z" fill="#2f6bd6"/>
+ <circle cx="150" cy="92" r="30" fill="#4a7de0"/>
+ <path d="M122 70 Q150 40 178 70 L150 62Z" fill="#f6c343"/>
+ <path d="M150 20 q-4 18 4 30 q12 -14 -4 -30Z" fill="#29a35a"/><path d="M150 20 q-4 18 4 30" fill="none" stroke="#fff" stroke-width="1"/>
+ <circle cx="140" cy="92" r="3" fill="#111"/><circle cx="160" cy="92" r="3" fill="#111"/>
+ <path d="M142 106 Q150 112 158 106" stroke="#7a1f1f" fill="none" stroke-width="2"/>
+ <path d="M120 125 Q150 112 180 125 L200 230 L100 230Z" fill="#4a7de0"/>
+ <path d="M120 125 Q150 150 180 125 L185 140 Q150 165 115 140Z" fill="#f6c343"/>
+ <path d="M100 230 L200 230 L215 280 L85 280Z" fill="#f6c343"/>
+ <rect x="100" y="104" width="105" height="7" rx="3" fill="#b5651d" transform="rotate(-8 150 107)"/>
+ <path d="M130 140 Q112 125 128 108" stroke="#4a7de0" stroke-width="14" fill="none" stroke-linecap="round"/>
+ <path d="M175 145 Q205 120 195 100" stroke="#4a7de0" stroke-width="14" fill="none" stroke-linecap="round"/>
+ </g>
+ <g fill="#fff" opacity=".9" font-size="22"><text x="30" y="80">♪<animate attributeName="y" values="80;50;80" dur="3s" repeatCount="indefinite"/></text><text x="255" y="110">♫<animate attributeName="y" values="110;70;110" dur="2.5s" repeatCount="indefinite"/></text></g>
+</svg>
+<h1>श्रीमद् भगवद्गीता</h1>
+<p>Bhagavad Gītā Audiobook<br>Recitation by<br>His Holiness Shree 1008 Swami Harihar Ji Maharaj</p>
+<button id="enter">▶ Enter</button>
+</div>
+
+<!-- PAGE 2: chapters -->
+<div id="chapters" class="page">
+ <div class="top">Autoplay <div class="sw" id="auto"><i></i></div></div>
+ <div class="frame"><div class="title">Gītā Dhyānam ♪</div><div class="grid" id="cg"></div>
+ <div style="display:flex;gap:10px;margin-top:16px"><div class="card" style="flex:1;min-height:0;padding:12px" onclick="yt('QLYquQ_dwa0');$('info').innerHTML='Geeta Mahatmya'">Geeta Mahatmya</div><div class="card" style="flex:1;min-height:0;padding:12px" onclick="yt('2V6me_y9a28');$('info').innerHTML='All 18 Chapters'">All 18 Chapters Recitation</div></div></div>
+</div>
+
+<!-- PAGE 3: verses -->
+<div id="verses" class="page">
+ <div class="top">Autoplay <div class="sw" id="auto2"><i></i></div></div>
+ <div class="frame"><div class="back" id="back" style="color:#fff">‹ Back</div><h2 id="vt"></h2><div class="verses" id="vg"></div></div>
+</div>
+
+<div id="msg"></div>
+<div id="ytw" style="display:none;position:fixed;bottom:64px;left:50%;transform:translateX(-50%);width:100%;max-width:480px;background:#000"><iframe id="ytf" style="width:100%;height:200px;border:0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+<div id="bar"><button id="prev">⏮</button><button id="pp">⏸</button><button id="next">⏭</button><div id="info"></div></div>
+</div>
+<audio id="au" preload="auto"></audio>
+
+<script>
+/* ====== CONFIG: replace with your 18 links ======
+   Each chapter link is a folder/base URL. Verse files are built by verseUrl().
+   Example: "https://yoursite.com/gita/ch2/" -> ch2/1.mp3, 2.mp3 ... */
+const CHAPTER_LINKS = {
+  traditional: ["PLJxKKz5cigjfwnRmEFSnYWlSJnWw1bxR8","PLJxKKz5cigjdkLTrKUMXU6UKmXctbK2QT","PLJxKKz5cigjeS2gXPEQcvhaKhIbeJtko0","PLJxKKz5cigje90Xta9_YwyzDxf2mrufp6","PLJxKKz5cigjcQ9gaFZrqrYUWVXLxNmd6t","PLJxKKz5cigjcoXbhfUheaXGUH1Z1_WueN","PLJxKKz5cigjd0vdswc9NEjo3YfTv-eH7P","PLJxKKz5cigjfcDpL2-JbXEEX_UO6LbAen","PLJxKKz5cigjcLBh0Q56xv9Q8PrUZjnQzN","PLJxKKz5cigjesg7X15U2wCVuksgx8t61z","PLJxKKz5cigjdWspBTr7P6TD01nAINBS04","PLJxKKz5cigjcGsSVAF0Y0dxxdJfs7R5Kl","PLJxKKz5cigjdaOsHxhRIM6slB7qrOReRD","PLJxKKz5cigjeYnxQifoZsiJC93Zdft1gK","PLJxKKz5cigjcHfqlDok6gk9akgp0Rk4dT","PLJxKKz5cigjdr4SjOi_pAwK-jacTa7ohZ","PLJxKKz5cigjf7l41Fzhee0ctzjxUr9vbU","PLJxKKz5cigjd8npT5uh9bOdJ2PcNWSG89"],   // YouTube playlist IDs, chapters 1-18
+  classical:   Array(18).fill("")    // paste 18 Classical links here
+};
+const verseUrl = (base, v) => base + v + ".mp3";   // adjust to your file naming
+const REPEAT = 12;                                  // each mantra repeated 12 times
+/* ================================================= */
+const NAMES=["The Yoga of Arjuna's Grief","The Yoga of Knowledge","The Karma Yoga","The Yoga of Renunciation of Action","The Yoga of True Renunciation","The Yoga of Meditation","The Yoga of Knowledge & Wisdom","The Yoga of Imperishable Brahman","The Yoga of Royal Secret","The Yoga of Divine Glories","The Yoga of Cosmic Form","The Yoga of Devotion","The Yoga of Field & Knower","The Yoga of Three Gunas","The Yoga of Supreme Person","The Yoga of Divine & Demonic","The Yoga of Threefold Faith","The Yoga of Liberation"];
+const COUNTS=[47,72,43,42,29,47,30,28,34,42,55,20,35,27,20,24,28,78];
+const $=id=>document.getElementById(id), au=$("au");
+const PL_COUNT={5:29,13:35,18:77};
+let mode="traditional", auto=false, ch=0, vs=0, rep=0;
+
+function show(id){document.querySelectorAll(".page").forEach(p=>p.classList.remove("on"));$(id).classList.add("on");window.scrollTo(0,0)}
+["auto","auto2"].forEach(i=>$(i).onclick=()=>{auto=!auto;$("auto").classList.toggle("on",auto);$("auto2").classList.toggle("on",auto)});
+
+NAMES.forEach((n,i)=>{const d=document.createElement("div");d.className="card";d.innerHTML=`<b>${i+1}</b><br>${n}`;d.onclick=()=>openCh(i+1);$("cg").appendChild(d)});
+function openCh(c){ch=c;$("vt").textContent="Chapter #"+c;const g=$("vg");g.innerHTML="";
+ for(let v=1;v<=COUNTS[c-1];v++){const d=document.createElement("div");d.className="v"+(Math.floor((v-1)/5)%2==0?" alt":"");d.id="v"+v;d.textContent=v;d.onclick=()=>play(c,v);g.appendChild(d)}
+ show("verses")}
+$("back").onclick=()=>show("chapters");
+
+function play(c,v){ch=c;vs=v;rep=1;const base=CHAPTER_LINKS[mode][c-1];
+ document.querySelectorAll(".v").forEach(e=>e.classList.remove("cur"));const e=$("v"+v);if(e)e.classList.add("cur");
+ $("bar").classList.add("on");updInfo();
+ if(!base){$("msg").textContent="Classical links for chapter "+c+" are not added yet.";return}
+ if(/^PL/.test(base)){yt("videoseries?list="+base+"&index="+(Math.min(v,PL_COUNT[c]||v)-1));return}
+ $("msg").textContent="";au.src=verseUrl(base,v);au.play().catch(()=>$("msg").textContent="Could not load audio — check the link.")}
+function yt(p){stop=true;if(ctx)ctx.close().catch(()=>{});au.pause();$("pp").style.display="none";
+ let u;if(p.startsWith("videoseries")){const q=new URLSearchParams(p.split("?")[1]);u="https://www.youtube.com/watch?list="+q.get("list")+"&index="+(+q.get("index"))}else u="https://youtu.be/"+p;
+ $("msg").innerHTML='<a href="'+u+'" target="_blank" rel="noopener" style="color:#fff;font-size:15px">If YouTube did not open, tap here ▶</a>';
+ $("bar").classList.add("on");const iu=/Android/i.test(navigator.userAgent)?"intent://"+u.replace("https://","")+"#Intent;scheme=https;package=com.google.android.youtube;end":u;const a=document.createElement("a");a.href=iu;a.target="_blank";a.rel="noopener";document.body.appendChild(a);a.click();a.remove()}
+function updInfo(){$("info").innerHTML=`Chapter ${ch} · Verse ${vs}<br><small>Gurudev's recitation</small>`}
+au.onended=()=>{if(rep<REPEAT){rep++;updInfo();au.currentTime=0;au.play()}
+ else if(auto){nextV()}else{$("pp").textContent="▶"}};
+function nextV(){if(vs<COUNTS[ch-1])play(ch,vs+1);else if(ch<18){openCh(ch+1);play(ch+1,1)}}
+function prevV(){if(vs>1)play(ch,vs-1)}
+$("next").onclick=nextV;$("prev").onclick=prevV;
+$("pp").onclick=()=>{if(au.paused){au.play();$("pp").textContent="⏸"}else{au.pause();$("pp").textContent="▶"}};
+au.onplay=()=>$("pp").textContent="⏸";
+
+/* ===== Soft, calm ambient sound (very quiet, slow, no melody) ===== */
+let ctx,stop=false;
+function startRaga(){ctx=new (window.AudioContext||window.webkitAudioContext)();
+ const m=ctx.createGain();m.gain.setValueAtTime(0,ctx.currentTime);m.gain.linearRampToValueAtTime(.09,ctx.currentTime+5);m.connect(ctx.destination);
+ [[146.83,0],[220,2],[293.66,4]].forEach(([f,d])=>{const o=ctx.createOscillator(),g=ctx.createGain(),l=ctx.createOscillator(),lg=ctx.createGain();
+  o.type="sine";o.frequency.value=f;g.gain.value=.5;l.frequency.value=.07+d*.01;lg.gain.value=.35;l.connect(lg);lg.connect(g.gain);o.connect(g);g.connect(m);o.start();l.start()})}
+$("enter").onclick=()=>{try{startRaga()}catch(e){}show("chapters");
+ // the soft sound keeps playing on the chapter page until a verse is played
+};
+au.addEventListener("play",()=>{stop=true;if(ctx)ctx.close().catch(()=>{})});
+</script>
+</body></html>
