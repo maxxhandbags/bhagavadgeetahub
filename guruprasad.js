@@ -1,4 +1,5 @@
 (function(){
+try{(window.D||[]).forEach(function(x){if(x.t==="Evansville"){x.c="Drs. Sunaina & Sumir Bhateja";x.p="+1-812-459-7877";x.e="bhatejas@hotmail.com"}})}catch(e){}
 var C='display:block;background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 6px 16px #7d627226;text-decoration:none;border-top:7px solid #f4a6c6';
 var BT='display:block;margin:8px 10px 12px;padding:10px 6px;border-radius:99px;background:linear-gradient(135deg,#ffd3e1,#ffe0b8);color:#7a2a50;font:800 14px system-ui,sans-serif;text-align:center';
 var H='<div class="w"><h2>📖 Guru Prasad · October 2026</h2><p style="margin:-6px 0 14px;font:16px/1.5 system-ui,sans-serif;color:#7d6272">Monthly magazine of Geeta Ashram, Delhi Cantt. Read it free, in Hindi or English.</p>'
