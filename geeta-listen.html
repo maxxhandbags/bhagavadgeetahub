@@ -1,0 +1,64 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Read &amp; Listen · Bhagavad Geeta</title>
+<style>
+html,body{margin:0;height:100%;background:#1a1410;font-family:system-ui,sans-serif}
+#w{display:flex;flex-direction:column;height:100%}
+#bk{flex:1;border:0;width:100%;min-height:0}
+#bar{flex:none;height:56px;display:flex;align-items:center;gap:8px;padding:0 10px;background:#2a1d14;color:#fff;border-top:1px solid #5a3e2a}
+#bar button{border:0;border-radius:99px;font:700 15px system-ui;padding:10px 16px;background:linear-gradient(135deg,#ffd3e1,#ffe0b8);color:#7a2a50}
+#bar .s{padding:10px 12px}
+#inf{flex:1;font-size:14px;line-height:1.2;min-width:0}
+#inf small{display:block;opacity:.7;font-size:11px}
+#pl{width:96px;height:54px;flex:none;border-radius:6px;overflow:hidden;background:#000;display:none}
+#pl iframe{width:96px;height:54px}
+label{font-size:11px;opacity:.85;display:flex;align-items:center;gap:3px}
+</style></head><body><div id="w">
+<iframe id="bk" title="Bhagavad Geeta"></iframe>
+<div id="bar"><div id="pl"><div id="yt"></div></div>
+<button class="s" id="pv" aria-label="Previous verse">‹</button>
+<div id="inf">Turn to a verse page to listen 🎧</div>
+<button class="s" id="nx" aria-label="Next verse">›</button>
+<button id="go">🎧 Listen</button>
+<label><input type="checkbox" id="fo"> Auto</label></div></div>
+<script>
+var PL=["PLJxKKz5cigjfwnRmEFSnYWlSJnWw1bxR8", "PLJxKKz5cigjdkLTrKUMXU6UKmXctbK2QT", "PLJxKKz5cigjeS2gXPEQcvhaKhIbeJtko0", "PLJxKKz5cigje90Xta9_YwyzDxf2mrufp6", "PLJxKKz5cigjcQ9gaFZrqrYUWVXLxNmd6t", "PLJxKKz5cigjcoXbhfUheaXGUH1Z1_WueN", "PLJxKKz5cigjd0vdswc9NEjo3YfTv-eH7P", "PLJxKKz5cigjfcDpL2-JbXEEX_UO6LbAen", "PLJxKKz5cigjcLBh0Q56xv9Q8PrUZjnQzN", "PLJxKKz5cigjesg7X15U2wCVuksgx8t61z", "PLJxKKz5cigjdWspBTr7P6TD01nAINBS04", "PLJxKKz5cigjcGsSVAF0Y0dxxdJfs7R5Kl", "PLJxKKz5cigjdaOsHxhRIM6slB7qrOReRD", "PLJxKKz5cigjeYnxQifoZsiJC93Zdft1gK", "PLJxKKz5cigjcHfqlDok6gk9akgp0Rk4dT", "PLJxKKz5cigjdr4SjOi_pAwK-jacTa7ohZ", "PLJxKKz5cigjf7l41Fzhee0ctzjxUr9vbU", "PLJxKKz5cigjd8npT5uh9bOdJ2PcNWSG89"];
+var PLC={5:29,13:35,18:79};
+var bk=document.getElementById('bk');
+bk.src='geeta-book/index.html'+location.hash;
+var $=function(i){return document.getElementById(i)};
+var V=null,cur=1,sel=null,tgt=null,yp=null,ready=false,playing=false,started=false;
+function loadBook(){try{V=bk.contentWindow.eval('BOOK.verses')}catch(e){}
+ if(!V){fetch('geeta-book/index.html').then(function(r){return r.text()}).then(function(t){var m=t.match(/const BOOK=(\{[\s\S]*?\});\n/);if(m)V=JSON.parse(m[1]).verses}).catch(function(){})}}
+bk.addEventListener('load',loadBook);
+function pagesShown(){var n=1;try{n=bk.contentWindow.eval('spread')?2:1}catch(e){}
+ if(n==1)return [cur];var l=cur===1?0:(cur%2===0?cur:cur-1);return [l,l+1]}
+function pick(){if(!V)return null;var ps=pagesShown(),found=null;
+ ps.forEach(function(p){Object.keys(V).forEach(function(k){V[k].forEach(function(s,i){if(s===p&&!found)found={c:+k,v:i+1}})})});
+ if(!found){var q=ps[ps.length-1],bp=0;
+  Object.keys(V).forEach(function(k){V[k].forEach(function(s,i){if(s<=q&&s>=bp){bp=s;found={c:+k,v:i+1}}})});
+  if(found&&q<V[1][0])found=null}
+ return found}
+function lab(){if(!sel){$('inf').innerHTML='Turn to a verse page to listen 🎧';$('go').style.opacity=.5;return}
+ $('inf').innerHTML='Chapter '+sel.c+' · Verse '+sel.v+'<small>Gurudev’s recitation</small>';$('go').style.opacity=1}
+function poll(){var p=1;try{p=+localStorage.getItem('bg-page')||1}catch(e){}
+ var f=pick(),ch=(p!==cur)||!sel!==!f||(f&&sel&&(f.c!==sel.c||f.v!==sel.v));
+ if(!ch)return;var moved=(p!==cur);cur=p;
+ var same=f&&sel&&f.c===sel.c&&f.v===sel.v;sel=f;lab();
+ if(moved&&!same&&sel&&$('fo').checked&&started)play()}
+setInterval(poll,500);
+function step(d){if(!sel||!V)return;var c=sel.c,v=sel.v+d,n=V[c].length;
+ if(v<1){if(c>1){c--;v=V[c].length}else v=1}else if(v>n){if(c<18){c++;v=1}else v=n}
+ sel={c:c,v:v};lab();if(started)play()}
+$('pv').onclick=function(){step(-1)};$('nx').onclick=function(){step(1)};
+function play(){if(!sel||!ready)return;started=true;$('pl').style.display='block';
+ var c=sel.c,i=Math.min(sel.v,PLC[c]||sel.v)-1;tgt=i;
+ try{yp.loadPlaylist({listType:'playlist',list:PL[c-1],index:i});yp.setVolume(45);playing=true;$('go').textContent='⏸ Pause'}catch(e){}}
+$('go').onclick=function(){if(!sel)return;
+ if(playing){try{yp.pauseVideo()}catch(e){}playing=false;$('go').textContent='🎧 Listen';return}
+ play()};
+function onState(e){var s=e.data;
+ if(s===0){try{yp.stopVideo()}catch(x){}playing=false;$('go').textContent='🎧 Listen'}
+ if(s===1){try{if(yp.getPlaylistIndex()!==tgt){yp.pauseVideo();playing=false;$('go').textContent='🎧 Listen'}}catch(x){}}}
+window.onYouTubeIframeAPIReady=function(){yp=new YT.Player('yt',{width:96,height:54,playerVars:{playsinline:1,rel:0,controls:0,modestbranding:1},events:{onReady:function(){ready=true},onStateChange:onState}})};
+var t=document.createElement('script');t.src='https://www.youtube.com/iframe_api';document.head.appendChild(t);
+</script></body></html>
