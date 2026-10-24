@@ -1,0 +1,20 @@
+name: unpack-geeta-pages
+on: push
+permissions:
+  contents: write
+jobs:
+  unpack:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Unpack zips
+        run: |
+          shopt -s nullglob
+          z=(geeta-book/pages/*.zip)
+          if [ ${#z[@]} -eq 0 ]; then echo "no zips"; exit 0; fi
+          for f in "${z[@]}"; do unzip -o -q "$f" -d geeta-book/pages; rm "$f"; done
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add -A
+          git commit -m "Unpack Geeta book pages"
+          git push
