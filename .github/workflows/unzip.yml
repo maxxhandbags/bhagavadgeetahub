@@ -10,7 +10,7 @@ jobs:
       - name: Unpack zips
         run: |
           shopt -s nullglob
-          z=(geeta-book/pages/*.zip)
+          z=(geeta-book/pages/*.zip geeta-*.zip)
           if [ ${#z[@]} -eq 0 ]; then echo "no zips"; exit 0; fi
           for f in "${z[@]}"; do unzip -o -q "$f" -d geeta-book/pages; rm "$f"; done
           git config user.name "github-actions"
