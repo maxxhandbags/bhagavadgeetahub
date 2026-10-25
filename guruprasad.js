@@ -13,10 +13,16 @@ s.id="gpbook";
 s.setAttribute("style","background:linear-gradient(135deg,#fff3c9,#ffd9b8 55%,#ffd0e0);padding:22px 0;border-top:4px solid #ffe08a;border-bottom:4px solid #ffe08a");
 s.innerHTML='<div class="w" style="text-align:center"><div style="font-size:44px;line-height:1">📖</div><div style="font:800 clamp(24px,6.5vw,34px)/1.2 Georgia,serif;color:#b4457a;margin:6px 0 4px">Read the Bhagavad Geeta</div><div style="font:700 clamp(15px,4vw,18px)/1.5 system-ui,sans-serif;color:#4a2c3d;margin-bottom:12px">The complete Shrimad Bhagavad Geeta · 745 pages · Free<br>Open any chapter or verse (श्लोक) and read as you wish</div><a href="/geeta-listen.html" style="display:inline-block;padding:15px 30px;border-radius:99px;background:linear-gradient(135deg,#e0679a,#f97316);color:#fff;font:800 19px system-ui,sans-serif;text-decoration:none;border:3px solid #fff;box-shadow:0 8px 22px #b4457a55">📖 Open the Book</a><div style="font:14px/1.5 system-ui,sans-serif;color:#7d6272;margin-top:10px">Tap <b>Find Verse · श्लोक</b> inside the book to jump to any chapter or verse. Swipe to turn pages.</div></div>';
 if(v&&v.parentNode)v.parentNode.insertBefore(s,v.nextSibling);else if(ab)ab.parentNode.insertBefore(s,ab)}
+function vilom(){if(document.getElementById("gpvilom"))return;
+var bk=document.getElementById("gpbook"),ab=document.getElementById("about"),s=document.createElement("section");
+s.id="gpvilom";
+s.setAttribute("style","background:linear-gradient(135deg,#ffe6f0,#fff0d6 55%,#e9e0ff);padding:22px 0;border-bottom:4px solid #ffd0e0");
+s.innerHTML='<div class="w" style="text-align:center"><div style="font-size:40px;line-height:1">🕉️</div><div style="font:800 clamp(22px,6vw,30px)/1.25 Georgia,serif;color:#b4457a;margin:6px 0 4px">Mool Vilom Path of the Bhagavad Geeta</div><div style="font:700 clamp(15px,4vw,18px)/1.5 system-ui,sans-serif;color:#4a2c3d;margin-bottom:12px">Recited in reverse order, from Chapter 18 Verse 78 back to Chapter 1 Verse 1<br>Recited by devotees and disciples, offered with devotion in honour of Swami Hariharji Maharaj</div><a href="https://youtu.be/b4rikJY8ESA" target="_blank" rel="noopener" style="display:block;max-width:320px;margin:0 auto 12px;position:relative"><img src="https://img.youtube.com/vi/b4rikJY8ESA/hqdefault.jpg" alt="Mool Vilom Path" loading="lazy" onerror="this.style.display=\'none\'" style="width:100%;display:block;border-radius:14px;box-shadow:0 6px 16px #7d627240"></a><a href="https://youtu.be/b4rikJY8ESA" target="_blank" rel="noopener" style="display:inline-block;padding:14px 28px;border-radius:99px;background:linear-gradient(135deg,#e0679a,#f97316);color:#fff;font:800 18px system-ui,sans-serif;text-decoration:none;border:3px solid #fff;box-shadow:0 8px 22px #b4457a55">▶ Listen on YouTube</a></div>';
+if(bk&&bk.parentNode)bk.parentNode.insertBefore(s,bk.nextSibling);else if(ab)ab.parentNode.insertBefore(s,ab)}
 function add(){if(document.getElementById("gpcards"))return;
 var ab=document.getElementById("about");if(!ab)return;
 var s=document.createElement("section");s.id="gpcards";s.className="band b1";s.innerHTML=H;
 ab.parentNode.insertBefore(s,ab)}
-function all(){book();add()}
+function all(){book();vilom();add()}
 if(document.getElementById("about"))all();else document.addEventListener("DOMContentLoaded",all);
 })();
