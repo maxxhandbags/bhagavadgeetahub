@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bhagavad Geeta – All 700 Verses with Sanskrit Recitation and English Meaning</title>
+<meta name="description" content="Listen to all 700 verses of the Bhagavad Geeta, chapter by chapter, with Sanskrit recitation by His Holiness Swami Hari Har Ji Maharaj and English narration of the meaning of each verse.">
+<style>
+:root{--p:#b4457a;--t:#4a2c3d}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.6 system-ui,sans-serif;color:var(--t);background:linear-gradient(180deg,#fff3c9,#ffe0ec 40%,#fff8ef)}
+.w{max-width:720px;margin:0 auto;padding:18px 16px 40px}
+h1{font:800 clamp(24px,6.5vw,34px)/1.25 Georgia,serif;color:var(--p);text-align:center;margin:8px 0}
+.sub{text-align:center;font-weight:700;margin:0 0 12px}
+.box{background:#fff;border-radius:18px;padding:14px 16px;box-shadow:0 6px 16px #7d627226;margin:14px 0}
+#pw{position:relative;padding-top:56.25%;background:#000;border-radius:14px;overflow:hidden}
+#pw>div,#pw iframe{position:absolute;inset:0;width:100%;height:100%}
+#now{text-align:center;font-weight:800;margin:10px 0 2px;color:var(--p)}
+#hint{text-align:center;font-size:14px;color:#7d6272;margin:0 0 4px}
+.g{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.c{border:0;border-radius:14px;padding:12px 8px;background:#fff;box-shadow:0 4px 12px #7d627222;border-top:5px solid #f4a6c6;font:700 14px/1.3 system-ui,sans-serif;color:var(--t);text-align:center}
+.c b{display:block;font-size:20px;color:var(--p)}
+.c.on{background:linear-gradient(135deg,#ffd3e1,#ffe0b8)}
+a{color:var(--p);font-weight:700}
+.l{text-align:center;font-size:15px}
+</style></head><body><div class="w">
+<h1>Listen to the Divine Wisdom of the Bhagavad Geeta</h1>
+<p class="sub">All 700 verses, chapter by chapter, with Sanskrit recitation by His Holiness Shree 1008 Swami Hari Har Ji Maharaj, and an English narration explaining the meaning of each verse, one by one</p>
+<div class="box"><p style="margin:0">Even if you do not understand Sanskrit, you can now listen, understand and reflect upon the timeless teachings of Bhagavan Shri Krishna to Arjuna. Let the divine words spoken by the lotus lips of Lord Krishna illuminate your path, deepen your understanding, and bring the wisdom of the Bhagavad Geeta into your daily life.</p><p style="margin:10px 0 0;text-align:center"><b>Listen. Understand. Reflect. Live the Teachings.</b></p></div>
+<div id="pw"><div id="yt"></div></div>
+<div id="now">Chapter 1</div>
+<p id="hint">Tap a chapter below to play it</p>
+<div class="g" id="g"></div>
+<p class="l" style="margin-top:14px"><a id="ext" href="https://youtube.com/playlist?list=PLLOZWj0BRcxI" target="_blank" rel="noopener">If the player does not play, open the playlist on YouTube ▶</a></p>
+<div class="box"><p style="margin:0;font-size:15px">With Gurudev's blessings, this audio book makes the eternal wisdom of the Bhagavad Geeta accessible to everyone, bringing the sacred message of Lord Krishna to devotees across the world.</p></div>
+<p class="l"><a href="/audiobook.html">Chapter-by-chapter verse audio with repeated recitation</a> · <a href="/geeta-listen.html">Read &amp; Listen to the book</a> · <a href="/">Home</a></p>
+</div>
+<script>
+var PL="PLLOZWj0BRcxI";
+var N=["Arjuna Vishada Yoga · The Yoga of Arjuna's Grief","Sankhya Yoga · The Yoga of Knowledge","Karma Yoga","Jnana Karma Sanyasa Yoga","Karma Sanyasa Yoga","Dhyana Yoga · Meditation","Jnana Vijnana Yoga","Akshara Brahma Yoga","Raja Vidya Raja Guhya Yoga","Vibhuti Yoga","Vishvarupa Darshana Yoga","Bhakti Yoga · Devotion","Kshetra Kshetrajna Vibhaga Yoga","Gunatraya Vibhaga Yoga","Purushottama Yoga","Daivasura Sampad Vibhaga Yoga","Shraddhatraya Vibhaga Yoga","Moksha Sanyasa Yoga"];
+var g=document.getElementById('g'),yp=null,ready=false,want=null,cur=0;
+N.forEach(function(n,i){var b=document.createElement('button');b.className='c';b.id='c'+i;b.innerHTML='<b>'+(i+1)+'</b>'+n;b.onclick=function(){go(i)};g.appendChild(b)});
+function mark(i){cur=i;document.querySelectorAll('.c').forEach(function(e){e.classList.remove('on')});document.getElementById('c'+i).classList.add('on');
+ document.getElementById('now').textContent='Chapter '+(i+1)+' · '+N[i].split(' · ')[0];document.getElementById('hint').textContent='Playing. Tap another chapter any time.';
+ document.getElementById('ext').href='https://www.youtube.com/watch?list='+PL+'&index='+(i+1)}
+function go(i){mark(i);if(ready){try{yp.loadPlaylist({listType:'playlist',list:PL,index:i});return}catch(e){}}
+ window.open('https://www.youtube.com/watch?list='+PL+'&index='+(i+1),'_blank')}
+function onState(e){if(e.data===1){try{var k=yp.getPlaylistIndex();if(k>=0&&k!==cur)mark(k)}catch(x){}}}
+window.onYouTubeIframeAPIReady=function(){yp=new YT.Player('yt',{width:'100%',height:'100%',playerVars:{playsinline:1,rel:0,listType:'playlist',list:PL},events:{onReady:function(){ready=true},onStateChange:onState}})};
+var t=document.createElement('script');t.src='https://www.youtube.com/iframe_api';document.head.appendChild(t);
+</script></body></html>
