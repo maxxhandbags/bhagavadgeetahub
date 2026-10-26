@@ -10,11 +10,19 @@ jobs:
       - name: Unpack zips
         run: |
           shopt -s nullglob
-          z=(geeta-book/pages/*.zip geeta-*.zip)
+          z=(geeta-book/pages/*.zip geeta-*.zip books-*.zip)
           if [ ${#z[@]} -eq 0 ]; then echo "no zips"; exit 0; fi
-          for f in "${z[@]}"; do unzip -o -q "$f" -d geeta-book/pages; rm "$f"; done
+          for f in "${z[@]}"; do
+            case "$f" in
+              books-*) d=books ;;
+              *) d=geeta-book/pages ;;
+            esac
+            mkdir -p "$d"
+            unzip -o -q "$f" -d "$d"
+            rm "$f"
+          done
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add -A
-          git commit -m "Unpack Geeta book pages"
+          git commit -m "Unpack zips"
           git push
