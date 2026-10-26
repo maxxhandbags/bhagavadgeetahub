@@ -1,5 +1,5 @@
 (function(){try{var h=document.head;function L(r,a){var l=document.createElement("link");l.rel=r;for(var k in a)l.setAttribute(k,a[k]);h.appendChild(l)}
-if(!document.querySelector('link[rel="manifest"]')){L("manifest",{href:"/manifest.json"});L("apple-touch-icon",{href:"/apple-touch-icon.png"});L("icon",{href:"/icon-192.png",type:"image/png"});var m=document.createElement("meta");m.name="theme-color";m.content="#b4457a";h.appendChild(m)}
+if(!document.querySelector('link[rel="manifest"]')){L("manifest",{href:"/manifest.json"});L("apple-touch-icon",{href:"/gh-icon-180.png"});L("icon",{href:"/gh-icon-192.png",type:"image/png"});var m=document.createElement("meta");m.name="theme-color";m.content="#b4457a";h.appendChild(m)}
 if("serviceWorker" in navigator)navigator.serviceWorker.register("/sw.js").catch(function(){})}catch(e){}})();
 (function(){
 try{(window.D||[]).forEach(function(x){if(x.t==="Evansville"){x.c="Drs. Sunaina & Sumir Bhateja";x.p="+1-812-459-7877";x.e="bhatejas@hotmail.com"};if(x.t==="Las Palmas"){x.p="+34-928-460-149";x.e="Geetaashramlaspalmas@gmail.com"}})}catch(e){}
