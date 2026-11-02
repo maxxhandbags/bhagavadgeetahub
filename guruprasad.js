@@ -33,6 +33,12 @@ function add(){if(document.getElementById("gpcards"))return;
 var ab=document.getElementById("about");if(!ab)return;
 var s=document.createElement("section");s.id="gpcards";s.className="band b1";s.innerHTML=H;
 ab.parentNode.insertBefore(s,ab)}
-function all(){book();shm();aud();add()}
+function chal(){if(document.getElementById("gpchal"))return;
+var bk=document.getElementById("gpbook"),ab=document.getElementById("about"),s=document.createElement("section");
+s.id="gpchal";
+s.setAttribute("style","background:linear-gradient(135deg,#fff0c2,#ffd9b8 50%,#ffe0ec);padding:24px 0;border-bottom:4px solid #ffe08a");
+s.innerHTML='<div class="w" style="text-align:center"><a href="https://youtu.be/v9vYkb1CmbE" target="_blank" rel="noopener"><img src="geeta-chalisa-cover.jpg" alt="Bhagavad Geeta Chalisa, Daily Paath" style="display:block;width:100%;max-width:520px;margin:0 auto 10px;border-radius:14px;box-shadow:0 8px 22px #7d627240"></a><div style="font:800 clamp(22px,6vw,30px)/1.25 Georgia,serif;color:#b4457a;margin:6px 0 4px">Bhagavad Geeta Chalisa</div><div style="font:700 clamp(15px,4vw,18px)/1.5 system-ui,sans-serif;color:#4a2c3d;margin-bottom:12px">Daily Paath · 41 Mantras Once<br>Sanskrit · Easy English · Hindi &amp; English Meaning</div><a href="https://youtu.be/v9vYkb1CmbE" target="_blank" rel="noopener" style="display:inline-block;padding:15px 30px;border-radius:99px;background:linear-gradient(135deg,#e0679a,#f97316);color:#fff;font:800 19px system-ui,sans-serif;text-decoration:none;border:3px solid #fff;box-shadow:0 8px 22px #b4457a55">▶ Watch on YouTube</a></div>';
+if(bk&&bk.parentNode)bk.parentNode.insertBefore(s,bk.nextSibling);else if(ab)ab.parentNode.insertBefore(s,ab)}
+function all(){book();shm();aud();chal();add()}
 if(document.getElementById("about"))all();else document.addEventListener("DOMContentLoaded",all);
 })();
