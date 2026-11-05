@@ -64,7 +64,7 @@ input,textarea{width:100%;padding:13px;border:2px solid #f4a6c6;border-radius:12
 <script>
 var BOOKS=[{"n": 0, "t": "New Digital Bhagavad Geeta (with barcode to listen to Gurudev's recitation)", "l": "Hindi / English", "p": null, "pg": null, "c": "", "i": "x", "big": "geeta-audiobook-cover.jpg"}, {"n": 1, "t": "Shrimad Bhagwad Geeta", "l": "English", "p": 50, "pg": 338, "c": "Hard Cover", "i": "bk01.jpg"}, {"n": 2, "t": "Shrimad Bhagwad Geeta with Vishnu Sahasranam", "l": "Hindi", "p": 25, "pg": 212, "c": "Hard Cover", "i": "bk02.jpg"}, {"n": 3, "t": "Geeta Ratan Mala (New)", "l": "English", "p": 50, "pg": 144, "c": "Hard Cover", "i": "bk03.jpg"}, {"n": 4, "t": "Geeta Ratan Mala (New)", "l": "Hindi", "p": 50, "pg": 256, "c": "Hard Cover", "i": "bk04.jpg"}, {"n": 5, "t": "Geeta Ratan Mala (Old)", "l": "English", "p": 50, "pg": 650, "c": "Hard Cover", "i": "bk05.jpg"}, {"n": 6, "t": "Geeta Gaurav", "l": "Hindi", "p": 100, "pg": 192, "c": "Hard Cover", "i": "bk06.jpg"}, {"n": 12, "t": "Shrimad Bhagwad Geeta (Purshotam Bhardwaj)", "l": "Hindi", "p": 100, "pg": 634, "c": "Hard Cover", "i": "bk12.jpg"}, {"n": 13, "t": "Harihar Tika", "l": "Hindi", "p": 50, "pg": 118, "c": "Soft Cover", "i": "bk13.jpg"}, {"n": 14, "t": "Geeta Saar", "l": "Hindi", "p": null, "pg": 94, "c": "Soft Cover", "i": "bk14.jpg"}, {"n": 15, "t": "Manas Geeta", "l": "Hindi", "p": 100, "pg": 238, "c": "Hard Cover", "i": "bk15.jpg"}, {"n": 56, "t": "Geeta Dham Mandir (photo book)", "l": "Hindi", "p": null, "pg": null, "c": "Soft Cover", "i": "bk56.jpg"}];
 var CONTACT="Pramod Kumar";
-var MAIL="https://formsubmit.co/Jskjgdgita@gmail.com",CC="guruji64@hotmail.com";
+var MAIL="https://api.web3forms.com/submit",KEY="de3220fd-786e-4b1c-bdbe-db45135be1ac";
 var $=function(i){return document.getElementById(i)};
 function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
 function price(p){if(p===null||p===undefined||p===""||p==="-")return "Please ask";if(String(p).toLowerCase()==="free")return "Free";return "₹"+p}
@@ -82,7 +82,7 @@ function close(){$("ov").classList.remove("on");document.body.style.overflow=""}
 $("ov").onclick=function(e){if(e.target===this)close()};
 function openB(ix){var b=BOOKS[ix],s=imgsrc(b);
 $("bx").innerHTML='<div class="bh">'+(s?'<img src="'+esc(s)+'" alt="">':'<div class="ph">📖</div>')+'<div><h2>'+esc(b.t)+'</h2><p>'+esc(b.l)+(b.c?' · '+esc(b.c):'')+'</p><p><b>🙏 By donation</b>'+(b.pg&&b.pg!=="-"?' · '+esc(b.pg)+' pages':'')+'</p></div></div>'
-+'<form id="f" method="POST" action="'+MAIL+'" novalidate><label>How many copies?</label><div class="qty"><button type="button" id="m">−</button><input id="qt" name="Number of copies" type="number" inputmode="numeric" min="1" value="1"><button type="button" id="pl">+</button></div>'
++'<form id="f" novalidate><label>How many copies?</label><div class="qty"><button type="button" id="m">−</button><input id="qt" name="Number of copies" type="number" inputmode="numeric" min="1" value="1"><button type="button" id="pl">+</button></div>'
 +'<label>Your name *</label><input id="nm" name="name" autocomplete="name">'
 +'<label>Phone / WhatsApp (with country code) *</label><input id="ph" name="Phone" type="tel" autocomplete="tel" placeholder="+91 …">'
 +'<label>Email *</label><input id="em" name="email" type="email" autocomplete="email">'
@@ -92,22 +92,23 @@ $("bx").innerHTML='<div class="bh">'+(s?'<img src="'+esc(s)+'" alt="">':'<div cl
 +'<label>Your Geeta Ashram (if any)</label><input id="ga" name="Geeta Ashram">'
 +'<label>Message (optional)</label><textarea id="ms" name="Message" rows="2"></textarea>'
 +'<div class="note">🙏 <b>These books are given by donation.</b> After placing your order, please <b>call Geeta Ashram Headquarters</b> at <b>011-25694380</b> or <b>9958545353</b> and tell <b>Guru Maa</b> or <b>'+esc(CONTACT)+'</b> about your order. They will also discuss the transportation method, the shipping time, and when the office can ship your order.</div><a class="dn" href="/#donate">🙏 Donate · Seva</a>'
-+'<div class="err" id="er"></div><input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off"><input type="hidden" name="BOOK ORDER" id="h1"><input type="hidden" name="Book" value="'+esc(b.t)+'"><input type="hidden" name="Language" value="'+esc(b.l)+'"><input type="hidden" name="_subject" id="h2"><input type="hidden" name="_cc" value="'+CC+'"><input type="hidden" name="_template" value="table"><input type="hidden" name="_next" value="'+location.origin+'/books.html?ordered=1"><input type="hidden" name="_autoresponse" value="Jai Shri Krishna! Thank you for your order of '+esc(b.t)+'. Please call Geeta Ashram Headquarters at 011-25694380 or 9958545353 and tell Guru Maa or '+esc(CONTACT)+' about your order, so they can arrange the donation, transportation and shipping time. In service of Guru, Geeta and Gopal. Jai Shri Krishna, Jai Gurudev.">'
++'<div class="err" id="er"></div><input type="checkbox" name="botcheck" id="bc" style="display:none" tabindex="-1" autocomplete="off"><input type="hidden" name="Book" value="'+esc(b.t)+'"><input type="hidden" name="Language" value="'+esc(b.l)+'">'
 +'<button class="go" id="go" type="submit">Place Order 🙏</button><span class="cl" id="cl">Close</span></form>';
 $("ov").classList.add("on");document.body.style.overflow="hidden";$("ov").scrollTop=0;
 var qt=$("qt");$("m").onclick=function(){qt.value=Math.max(1,(+qt.value||1)-1)};$("pl").onclick=function(){qt.value=(+qt.value||0)+1};
 $("cl").onclick=close;
-$("f").onsubmit=function(e){var er=$("er");er.style.display="none";
+$("f").onsubmit=function(e){e.preventDefault();var er=$("er");er.style.display="none";
 var q=+qt.value,n=$("nm").value.trim(),p=$("ph").value.trim(),m=$("em").value.trim(),a=$("ad").value.trim(),c=$("ci").value.trim(),o=$("co").value.trim();
-function bad(t){e.preventDefault();er.textContent=t;er.style.display="block";return false}
+function bad(t){er.textContent=t;er.style.display="block"}
 if(!(q>=1))return bad("Please enter how many copies.");
 if(!n||!p||!m||!a||!c||!o)return bad("Please fill in all the boxes marked with *.");
 if(!/^\S+@\S+\.\S+$/.test(m))return bad("Please check your email address.");
-$("h1").value="BOOK ORDER: "+b.t+" x "+q+" copies";
-$("h2").value="BOOK ORDER - "+b.t+" x "+q+" - "+n+", "+c;
-var go=$("go");go.disabled=true;go.textContent="Sending…";return true}}
+if($("bc").checked)return;
+var go=$("go");go.disabled=true;go.textContent="Sending…";
+var body={access_key:KEY,subject:"BOOK ORDER - "+b.t+" x "+q+" - "+n+", "+c,from_name:"Geeta Hub BOOK ORDER","BOOK ORDER":"BOOK ORDER: "+b.t+" x "+q+" copies",Book:b.t,Language:b.l,"Number of copies":String(q),name:n,email:m,Phone:p,Address:a,"City and State":c,Country:o,"Geeta Ashram":$("ga").value.trim()||"-",Message:$("ms").value.trim()||"-"};
+fetch(MAIL,{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify(body)}).then(function(r){return r.json()}).then(function(j){
+ if(j&&j.success){thanks()}else{throw new Error((j&&j.message)||"x")}}).catch(function(x){go.disabled=false;go.textContent="Place Order 🙏";bad("Sorry, the order could not be sent. Please try again. ("+((x&&x.message)||"error")+")")})}}
 function thanks(){$("bx").innerHTML='<div class="ok"><h3>🙏 Thank you! Order received</h3><p>Your order has been sent to the Geeta Ashram office.</p><div class="note">🙏 Please <b>call Geeta Ashram Headquarters</b> at <b>011-25694380</b> or <b>9958545353</b> and tell <b>Guru Maa</b> or <b>'+esc(CONTACT)+'</b> about your order, so they can arrange the donation, transportation and shipping time.</div><a class="dn" href="/#donate">🙏 Donate · Seva</a><button class="go" id="again">Order another book</button><span class="cl" id="cl2">Close</span><p class="sm" style="text-align:center">In service of Guru, Geeta and Gopal<br>Jai Shri Krishna · Jai Gurudev</p></div>';
 $("ov").classList.add("on");document.body.style.overflow="hidden";$("again").onclick=close;$("cl2").onclick=close}
 render();
-if(/ordered=1/.test(location.search)){try{history.replaceState(null,"",location.pathname)}catch(e){}thanks()}
 </script></body></html>
