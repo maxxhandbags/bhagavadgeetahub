@@ -1,0 +1,115 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Order Geeta Ashram Books · Bhagavad Geeta Hub</title>
+<meta name="color-scheme" content="only light">
+<style>
+:root{color-scheme:only light;--pk:#b4457a;--tx:#4a2c3d}
+*{box-sizing:border-box}
+body{margin:0;font:17px/1.5 system-ui,sans-serif;color:var(--tx);background:linear-gradient(180deg,#fff3c9,#ffe0ec 45%,#fff8ef);min-height:100vh}
+.w{max-width:760px;margin:0 auto;padding:14px 14px 60px}
+.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.top a{color:var(--pk);font-weight:800;text-decoration:none;font-size:16px}
+h1{font:800 clamp(24px,6.5vw,34px)/1.2 Georgia,serif;color:var(--pk);text-align:center;margin:6px 0}
+.sub{text-align:center;font-weight:700;margin:0 0 12px;font-size:16px}
+.how{background:#fff;border-radius:16px;padding:10px 14px;box-shadow:0 4px 12px #7d627222;margin:10px 0;font-size:15px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 8px}
+.chip{border:2px solid #f4a6c6;background:#fff;color:var(--pk);border-radius:99px;padding:9px 16px;font:800 15px system-ui,sans-serif}
+.chip.on{background:linear-gradient(135deg,#ffd3e1,#ffe0b8)}
+#q{width:100%;padding:12px 14px;border:2px solid #f4a6c6;border-radius:14px;font:17px system-ui,sans-serif;margin-bottom:12px;background:#fff}
+.g{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(min-width:620px){.g{grid-template-columns:repeat(3,1fr)}}
+.card{background:#fff;border-radius:16px;box-shadow:0 5px 14px #7d627226;border:0;padding:0;text-align:left;overflow:hidden;display:flex;flex-direction:column;font:inherit;color:inherit;cursor:pointer;border-top:6px solid #f4a6c6}
+.im{aspect-ratio:3/4;background:linear-gradient(135deg,#fff3c9,#ffe0ec);display:flex;align-items:center;justify-content:center;padding:8px}
+.im img{max-width:100%;max-height:100%;object-fit:contain;border-radius:6px;box-shadow:0 3px 8px #0003}
+.im .ph{font-size:44px;text-align:center}
+.ct{padding:9px 11px 12px;flex:1;display:flex;flex-direction:column;gap:3px}
+.ct b{font-size:15px;line-height:1.3;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.ct span{font-size:13px;color:#7d6272}
+.ct .pr{font-weight:800;color:var(--pk);font-size:16px}
+.ct .bt{margin-top:auto;padding-top:6px}
+.ct .bt i{display:block;text-align:center;font-style:normal;font-weight:800;font-size:15px;color:#fff;background:linear-gradient(135deg,#e0679a,#f97316);border-radius:99px;padding:9px 6px}
+.none{text-align:center;padding:30px;color:#7d6272}
+.ov{position:fixed;inset:0;background:#4a2c3dcc;z-index:50;display:none;align-items:flex-start;justify-content:center;overflow:auto;padding:12px}
+.ov.on{display:flex}
+.bx{background:#fff;border-radius:22px;max-width:460px;width:100%;margin:auto;box-shadow:0 12px 40px #0008;overflow:hidden}
+.bh{display:flex;gap:12px;padding:14px;background:linear-gradient(135deg,#ffe6f0,#fff0d6);align-items:center}
+.bh img{width:84px;height:112px;object-fit:contain;background:#fff;border-radius:8px;box-shadow:0 3px 8px #0003;flex:none}
+.bh .ph{width:84px;height:112px;display:flex;align-items:center;justify-content:center;font-size:36px;background:#fff;border-radius:8px;flex:none}
+.bh h2{margin:0;font:800 19px/1.3 Georgia,serif;color:var(--pk)}
+.bh p{margin:3px 0 0;font-size:14px;color:#7d6272}
+form,.ok{padding:6px 16px 16px}
+label{display:block;margin:11px 0 3px;font-weight:700;font-size:15px}
+input,textarea{width:100%;padding:13px;border:2px solid #f4a6c6;border-radius:12px;font:17px system-ui,sans-serif;background:#fff}
+.qty{display:flex;align-items:center;gap:10px}
+.qty button{width:52px;height:52px;border-radius:50%;border:2px solid #f4a6c6;background:#fff;font:800 26px system-ui;color:var(--pk)}
+.qty input{width:90px;text-align:center;font-weight:800;font-size:20px}
+.note{background:#fff3c9;border-left:5px solid #f4a6c6;border-radius:10px;padding:10px 12px;margin:14px 0 6px;font-size:15px}
+.go{width:100%;margin-top:12px;padding:16px;border:0;border-radius:99px;background:linear-gradient(135deg,#e0679a,#f97316);color:#fff;font:800 19px system-ui,sans-serif}
+.go[disabled]{opacity:.6}
+.cl{display:block;text-align:center;padding:12px;color:#7d6272;text-decoration:underline;cursor:pointer;font-size:15px}
+.err{color:#c0262d;font-weight:700;font-size:15px;margin-top:8px;display:none}
+.sm{font-size:13px;color:#7d6272}
+.ok h3{font:800 22px Georgia,serif;color:var(--pk);margin:12px 0 6px}
+</style></head><body><div class="w">
+<div class="top"><a href="/">← Home</a><a href="/geeta-listen.html">📖 Read the Geeta</a></div>
+<h1>Geeta Ashram Books</h1>
+<p class="sub">Choose a book, then tap it to order</p>
+<div class="how">① Tap the book you want &nbsp;② Choose how many &nbsp;③ Fill in your details &nbsp;④ Tap Place Order. Then please contact <b>Pramod Kumar at Geeta Ashram, Delhi Headquarters</b> to arrange delivery.</div>
+<input id="q" type="search" placeholder="Search a book name…" autocomplete="off">
+<div class="chips"><button class="chip on" data-f="">All books</button><button class="chip" data-f="Hindi">Hindi</button><button class="chip" data-f="English">English</button></div>
+<div class="g" id="g"></div><div class="none" id="none" style="display:none">No book found. Try another word.</div>
+<p class="sm" style="text-align:center;margin-top:18px"><b>More books are being added soon.</b></p><p class="sm" style="text-align:center;margin-top:8px">Prices are per book, in Indian rupees (₹). In service of Guru, Geeta and Gopal<br>Jai Shri Krishna · Jai Gurudev</p>
+</div>
+<div class="ov" id="ov"><div class="bx" id="bx"></div></div>
+<script>
+var BOOKS=[{"n": 0, "t": "New Digital Bhagavad Geeta (with barcode to listen to Gurudev's recitation)", "l": "Hindi / English", "p": null, "pg": null, "c": "", "i": "x", "big": "geeta-audiobook-cover.jpg"}, {"n": 1, "t": "Shrimad Bhagwad Geeta", "l": "English", "p": 50, "pg": 338, "c": "Hard Cover", "i": "bk01.jpg"}, {"n": 2, "t": "Shrimad Bhagwad Geeta with Vishnu Sahasranam", "l": "Hindi", "p": 25, "pg": 212, "c": "Hard Cover", "i": "bk02.jpg"}, {"n": 3, "t": "Geeta Ratan Mala (New)", "l": "English", "p": 50, "pg": 144, "c": "Hard Cover", "i": "bk03.jpg"}, {"n": 4, "t": "Geeta Ratan Mala (New)", "l": "Hindi", "p": 50, "pg": 256, "c": "Hard Cover", "i": "bk04.jpg"}, {"n": 5, "t": "Geeta Ratan Mala (Old)", "l": "English", "p": 50, "pg": 650, "c": "Hard Cover", "i": "bk05.jpg"}, {"n": 6, "t": "Geeta Gaurav", "l": "Hindi", "p": 100, "pg": 192, "c": "Hard Cover", "i": "bk06.jpg"}, {"n": 12, "t": "Shrimad Bhagwad Geeta (Purshotam Bhardwaj)", "l": "Hindi", "p": 100, "pg": 634, "c": "Hard Cover", "i": "bk12.jpg"}, {"n": 13, "t": "Harihar Tika", "l": "Hindi", "p": 50, "pg": 118, "c": "Soft Cover", "i": "bk13.jpg"}, {"n": 14, "t": "Geeta Saar", "l": "Hindi", "p": null, "pg": 94, "c": "Soft Cover", "i": "bk14.jpg"}, {"n": 15, "t": "Manas Geeta", "l": "Hindi", "p": 100, "pg": 238, "c": "Hard Cover", "i": "bk15.jpg"}, {"n": 56, "t": "Geeta Dham Mandir (photo book)", "l": "Hindi", "p": null, "pg": null, "c": "Soft Cover", "i": "bk56.jpg"}];
+var CONTACT="Pramod Kumar";
+var MAILTO="https://formsubmit.co/ajax/Jskjgdgita@gmail.com",CC="guruji64@hotmail.com";
+var $=function(i){return document.getElementById(i)};
+function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function price(p){if(p===null||p===undefined||p===""||p==="-")return "Please ask";if(String(p).toLowerCase()==="free")return "Free";return "₹"+p}
+function imgsrc(b){return b.i?(b.big||"books/"+b.i):null}
+var flt="",term="";
+function render(){var g=$("g");g.innerHTML="";var n=0;
+BOOKS.forEach(function(b,ix){if(flt&&b.l.indexOf(flt)<0)return;if(term&&(b.t+" "+b.l).toLowerCase().indexOf(term)<0)return;n++;
+var c=document.createElement("button");c.className="card";var s=imgsrc(b);
+c.innerHTML='<div class="im">'+(s?'<img loading="lazy" src="'+esc(s)+'" alt="'+esc(b.t)+'">':'<div class="ph">📖</div>')+'</div><div class="ct"><b>'+esc(b.t)+'</b><span>'+esc(b.l)+(b.pg&&b.pg!=="-"?' · '+esc(b.pg)+' pages':'')+'</span><span class="pr">'+esc(price(b.p))+'</span><div class="bt"><i>Order</i></div></div>';
+c.onclick=function(){openB(ix)};g.appendChild(c)});
+$("none").style.display=n?"none":"block"}
+document.querySelectorAll(".chip").forEach(function(c){c.onclick=function(){document.querySelectorAll(".chip").forEach(function(x){x.classList.remove("on")});c.classList.add("on");flt=c.getAttribute("data-f");render()}});
+$("q").oninput=function(){term=this.value.trim().toLowerCase();render()};
+function close(){$("ov").classList.remove("on");document.body.style.overflow=""}
+$("ov").onclick=function(e){if(e.target===this)close()};
+function openB(ix){var b=BOOKS[ix],s=imgsrc(b);
+$("bx").innerHTML='<div class="bh">'+(s?'<img src="'+esc(s)+'" alt="">':'<div class="ph">📖</div>')+'<div><h2>'+esc(b.t)+'</h2><p>'+esc(b.l)+(b.c?' · '+esc(b.c):'')+'</p><p><b>'+esc(price(b.p))+'</b>'+(b.pg&&b.pg!=="-"?' · '+esc(b.pg)+' pages':'')+'</p></div></div>'
++'<form id="f" novalidate><label>How many copies?</label><div class="qty"><button type="button" id="m">−</button><input id="qt" type="number" inputmode="numeric" min="1" value="1"><button type="button" id="pl">+</button></div>'
++'<label>Your name *</label><input id="nm" autocomplete="name">'
++'<label>Phone / WhatsApp (with country code) *</label><input id="ph" type="tel" autocomplete="tel" placeholder="+91 …">'
++'<label>Email *</label><input id="em" type="email" autocomplete="email">'
++'<label>Address *</label><input id="ad" autocomplete="street-address">'
++'<label>City and State *</label><input id="ci">'
++'<label>Country *</label><input id="co" autocomplete="country-name">'
++'<label>Your Geeta Ashram (if any)</label><input id="ga">'
++'<label>Message (optional)</label><textarea id="ms" rows="2"></textarea>'
++'<div class="note">📞 <b>After placing your order,</b> please contact <b>'+esc(CONTACT)+'</b> at <b>Geeta Ashram, Delhi Headquarters</b> to discuss the transportation method, the shipping time, and when the office will be able to ship your order.</div>'
++'<div class="err" id="er"></div><input type="text" id="hp" style="display:none" tabindex="-1" autocomplete="off">'
++'<button class="go" id="go" type="submit">Place Order 🙏</button><span class="cl" id="cl">Close</span></form>';
+$("ov").classList.add("on");document.body.style.overflow="hidden";$("ov").scrollTop=0;
+var qt=$("qt");$("m").onclick=function(){qt.value=Math.max(1,(+qt.value||1)-1)};$("pl").onclick=function(){qt.value=(+qt.value||0)+1};
+$("cl").onclick=close;
+$("f").onsubmit=function(e){e.preventDefault();var er=$("er");er.style.display="none";
+var v={q:+qt.value,n:$("nm").value.trim(),p:$("ph").value.trim(),e:$("em").value.trim(),a:$("ad").value.trim(),c:$("ci").value.trim(),o:$("co").value.trim(),g:$("ga").value.trim(),m:$("ms").value.trim()};
+function bad(t){er.textContent=t;er.style.display="block"}
+if(!(v.q>=1))return bad("Please enter how many copies.");
+if(!v.n||!v.p||!v.e||!v.a||!v.c||!v.o)return bad("Please fill in all the boxes marked with *.");
+if(!/^\S+@\S+\.\S+$/.test(v.e))return bad("Please check your email address.");
+if($("hp").value)return;
+var go=$("go");go.disabled=true;go.textContent="Sending…";
+var body={"🚨 BOOK ORDER":"BOOK ORDER: "+b.t+" x "+v.q+" copies","Book":b.t,"Language":b.l,"Price":price(b.p),"Number of copies":v.q,"name":v.n,"Phone":v.p,"email":v.e,"Address":v.a,"City and State":v.c,"Country":v.o,"Geeta Ashram":v.g||"-","Message":v.m||"-",
+"_subject":"BOOK ORDER - "+b.t+" x "+v.q+" - "+v.n+", "+v.c,"_cc":CC,"_template":"table","_captcha":"false",
+"_autoresponse":"Jai Shri Krishna! Thank you for your order. We have received your order for "+v.q+" copy/copies of \""+b.t+"\". Please contact "+CONTACT+" at Geeta Ashram, Delhi Headquarters to discuss the transportation method, the shipping time, and when the office will be able to ship your order. In service of Guru, Geeta and Gopal. Jai Shri Krishna, Jai Gurudev."};
+fetch(MAILTO,{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify(body)}).then(function(r){return r.json()}).then(function(j){
+ if(j&&(j.success===true||j.success==="true")){done(b,v)}else{throw new Error("x")}}).catch(function(){go.disabled=false;go.textContent="Place Order 🙏";bad("Sorry, the order could not be sent. Please check your internet and try again.")})}}
+function done(b,v){$("bx").innerHTML='<div class="ok"><h3>🙏 Thank you! Order received</h3><p>Your order for <b>'+v.q+' × '+esc(b.t)+'</b> has been sent. A confirmation has been emailed to <b>'+esc(v.e)+'</b>.</p><div class="note">📞 Please contact <b>'+esc(CONTACT)+'</b> at <b>Geeta Ashram, Delhi Headquarters</b> to discuss the transportation method, shipping time, and when the office will be able to ship your order.</div><button class="go" id="again">Order another book</button><span class="cl" id="cl2">Close</span><p class="sm" style="text-align:center">In service of Guru, Geeta and Gopal<br>Jai Shri Krishna · Jai Gurudev</p></div>';
+$("again").onclick=close;$("cl2").onclick=close}
+render();
+</script></body></html>
