@@ -32,8 +32,8 @@ h1{font:800 clamp(24px,6.5vw,34px)/1.2 Georgia,serif;color:var(--pk);text-align:
 .ov.on{display:flex}
 .bx{background:#fff;border-radius:22px;max-width:460px;width:100%;margin:auto;box-shadow:0 12px 40px #0008;overflow:hidden}
 .bh{display:flex;gap:12px;padding:14px;background:linear-gradient(135deg,#ffe6f0,#fff0d6);align-items:center}
-.bh img{width:84px;height:112px;object-fit:contain;background:#fff;border-radius:8px;box-shadow:0 3px 8px #0003;flex:none}
-.bh .ph{width:84px;height:112px;display:flex;align-items:center;justify-content:center;font-size:36px;background:#fff;border-radius:8px;flex:none}
+.bh img{width:130px;height:173px;object-fit:contain;background:#fff;border-radius:8px;box-shadow:0 3px 8px #0003;flex:none}
+.bh .ph{width:130px;height:173px;display:flex;align-items:center;justify-content:center;font-size:36px;background:#fff;border-radius:8px;flex:none}
 .bh h2{margin:0;font:800 19px/1.3 Georgia,serif;color:var(--pk)}
 .bh p{margin:3px 0 0;font-size:14px;color:#7d6272}
 form,.ok{padding:6px 16px 16px}
@@ -105,7 +105,7 @@ if(!n||!p||!m||!a||!c||!o)return bad("Please fill in all the boxes marked with *
 if(!/^\S+@\S+\.\S+$/.test(m))return bad("Please check your email address.");
 if($("bc").checked)return;
 var go=$("go");go.disabled=true;go.textContent="Sending…";
-var body={access_key:KEY,subject:"BOOK ORDER - "+b.t+" x "+q+" - "+n+", "+c,from_name:"Geeta Hub BOOK ORDER","BOOK ORDER":"BOOK ORDER: "+b.t+" x "+q+" copies",Book:b.t,Language:b.l,"Number of copies":String(q),name:n,email:m,Phone:p,Address:a,"City and State":c,Country:o,"Geeta Ashram":$("ga").value.trim()||"-",Message:$("ms").value.trim()||"-"};
+var body={access_key:KEY,subject:"BOOK ORDER - "+b.t+" x "+q+" - "+n+", "+c,from_name:"Geeta Hub BOOK ORDER","BOOK ORDER":"BOOK ORDER: "+b.t+" x "+q+" copies",Book:b.t,Language:b.l,"Book photo":(s?location.origin+"/"+s:"-"),"Number of copies":String(q),name:n,email:m,Phone:p,Address:a,"City and State":c,Country:o,"Geeta Ashram":$("ga").value.trim()||"-",Message:$("ms").value.trim()||"-"};
 fetch(MAIL,{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify(body)}).then(function(r){return r.json()}).then(function(j){
  if(j&&j.success){thanks()}else{throw new Error((j&&j.message)||"x")}}).catch(function(x){go.disabled=false;go.textContent="Place Order 🙏";bad("Sorry, the order could not be sent. Please try again. ("+((x&&x.message)||"error")+")")})}}
 function thanks(){$("bx").innerHTML='<div class="ok"><h3>🙏 Thank you! Order received</h3><p>Your order has been sent to the Geeta Ashram office.</p><div class="note">🙏 Please <b>call Geeta Ashram Headquarters</b> at <b>011-25694380</b> or <b>9958545353</b> and tell <b>Guru Maa</b> or <b>'+esc(CONTACT)+'</b> about your order, so they can arrange the donation, transportation and shipping time.</div><a class="dn" href="/#donate">🙏 Donate · Seva</a><button class="go" id="again">Order another book</button><span class="cl" id="cl2">Close</span><p class="sm" style="text-align:center">In service of Guru, Geeta and Gopal<br>Jai Shri Krishna · Jai Gurudev</p></div>';
