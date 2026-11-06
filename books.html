@@ -51,6 +51,16 @@ input,textarea{width:100%;padding:13px;border:2px solid #f4a6c6;border-radius:12
 .sm{font-size:13px;color:#7d6272}
 .rc{background:#fffaf0;border:2px dashed #f4a6c6;border-radius:12px;padding:10px 14px;margin:10px 0;font-size:15px}.rc div{margin:3px 0}.rc b{color:#b4457a}
 @media print{.w,.cl,.go,.dn,.nop{display:none!important}.ov{position:static;display:block;background:#fff;padding:0}.bx{box-shadow:none;max-width:none}}
+#plx{display:none}
+body.plist .w,body.plist .ov{display:none!important}
+body.plist #plx{display:block;background:#fff;color:#000;padding:8px;font-family:system-ui,sans-serif}
+#plx h1{color:#000;font-size:24px;margin:0 0 2px}#plx .pm{text-align:center;font-size:13px;margin:0 0 10px}
+#plx .pg{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+#plx .pi{break-inside:avoid;border:1px solid #999;border-radius:6px;padding:6px;text-align:center;font-size:12px;line-height:1.3}
+#plx .pi img{width:100%;height:150px;object-fit:contain;display:block;margin-bottom:4px}
+#plx .pi b{display:block;font-size:13px}
+#plx .pf{margin-top:12px;font-size:12px;text-align:center}
+.pb{display:block;margin:4px 0 10px;padding:10px 16px;border:2px solid #f4a6c6;border-radius:99px;background:#fff;color:#b4457a;font:800 15px system-ui,sans-serif}
 .ok h3{font:800 22px Georgia,serif;color:var(--pk);margin:12px 0 6px}
 </style></head><body><div class="w">
 <div class="top"><a href="/">← Home</a><a href="/geeta-listen.html">📖 Read the Geeta</a></div>
@@ -59,9 +69,11 @@ input,textarea{width:100%;padding:13px;border:2px solid #f4a6c6;border-radius:12
 <div class="how">① Tap the book you want &nbsp;② Choose how many &nbsp;③ Fill in your details &nbsp;④ Tap Place Order. Then please <b>call Geeta Ashram Headquarters</b> and tell <b>Guru Maa</b> or <b>Pramod Kumar</b> about your order.</div>
 <input id="q" type="search" placeholder="Search a book name…" autocomplete="off">
 <div class="chips"><button class="chip on" data-f="">All books</button><button class="chip" data-f="Hindi">Hindi</button><button class="chip" data-f="English">English</button></div>
+<button class="pb" id="pbk">🖨 Print book list</button>
 <div class="g" id="g"></div><div class="none" id="none" style="display:none">No book found. Try another word.</div>
 <p class="sm" style="text-align:center;margin-top:18px"><b>More books are being added soon.</b></p><p class="sm" style="text-align:center;margin-top:8px">Books are given by donation. In service of Guru, Geeta and Gopal<br>Jai Shri Krishna · Jai Gurudev</p>
 </div>
+<div id="plx"></div>
 <div class="ov" id="ov"><div class="bx" id="bx"></div></div>
 <script>
 var BOOKS=[{"n": 1, "t": "Shrimad Bhagwad Geeta", "l": "English", "p": 50, "pg": 338, "c": "Hard Cover", "i": "bk01.jpg"}, {"n": 2, "t": "Shrimad Bhagwad Geeta with Vishnu Sahasranam", "l": "Hindi", "p": 25, "pg": 212, "c": "Hard Cover", "i": "bk02.jpg"}, {"n": 3, "t": "Geeta Ratan Mala (New)", "l": "English", "p": 50, "pg": 144, "c": "Hard Cover", "i": "bk03.jpg"}, {"n": 4, "t": "Geeta Ratan Mala (New)", "l": "Hindi", "p": 50, "pg": 256, "c": "Hard Cover", "i": "bk04.jpg"}, {"n": 5, "t": "Geeta Ratan Mala (Old)", "l": "English", "p": 50, "pg": 650, "c": "Hard Cover", "i": "bk05.jpg"}, {"n": 6, "t": "Geeta Gaurav", "l": "Hindi", "p": 100, "pg": 192, "c": "Hard Cover", "i": "bk06.jpg"}, {"n": 12, "t": "Shrimad Bhagwad Geeta (Purshotam Bhardwaj)", "l": "Hindi", "p": 100, "pg": 634, "c": "Hard Cover", "i": "bk12.jpg"}, {"n": 13, "t": "Harihar Tika", "l": "Hindi", "p": 50, "pg": 118, "c": "Soft Cover", "i": "bk13.jpg"}, {"n": 14, "t": "Geeta Saar", "l": "Hindi", "p": null, "pg": 94, "c": "Soft Cover", "i": "bk14.jpg"}, {"n": 15, "t": "Manas Geeta", "l": "Hindi", "p": 100, "pg": 238, "c": "Hard Cover", "i": "bk15.jpg"}, {"n": 56, "t": "Geeta Dham Mandir (photo book)", "l": "Hindi", "p": null, "pg": null, "c": "Soft Cover", "i": "bk56.jpg"}];
@@ -113,5 +125,11 @@ fetch(MAIL,{method:"POST",headers:{"Content-Type":"application/json",Accept:"app
 function thanks(r){var R=r?'<div class="rc"><div><b>Order No:</b> '+esc(r.ref)+'</div><div><b>Date:</b> '+esc(r.t)+'</div><div><b>Book:</b> '+esc(r.book)+' ('+esc(r.lang)+')</div><div><b>Copies:</b> '+esc(r.q)+'</div><div><b>Name:</b> '+esc(r.n)+'</div><div><b>Phone:</b> '+esc(r.p)+'</div><div><b>Email:</b> '+esc(r.m)+'</div><div><b>Address:</b> '+esc(r.a)+', '+esc(r.c)+', '+esc(r.o)+'</div></div>':'';
 $("bx").innerHTML='<div class="ok"><h3>🙏 Thank you! Order received</h3><p>Your order has been sent to the Geeta Ashram office and is being processed.</p>'+R+'<button class="go nop2" id="pr" style="background:#fff;color:#b4457a;border:2px solid #f4a6c6">🖨 Print / Save my order</button><div class="note">🙏 Please <b>call Geeta Ashram Headquarters</b> at <b>011-25694380</b> or <b>9958545353</b> and tell <b>Guru Maa</b> or <b>'+esc(CONTACT)+'</b> about your order'+(r?' (Order No. '+esc(r.ref)+')':'')+', so they can arrange the donation, transportation and shipping time.</div><a class="dn" href="/#donate">🙏 Donate · Seva</a><button class="go" id="again">Order another book</button><span class="cl" id="cl2">Close</span><p class="sm" style="text-align:center">In service of Guru, Geeta and Gopal<br>Jai Shri Krishna · Jai Gurudev</p></div>';
 $("ov").classList.add("on");document.body.style.overflow="hidden";$("ov").scrollTop=0;$("again").onclick=close;$("cl2").onclick=close;$("pr").onclick=function(){window.print()}}
+function plist(){var h='<h1>Geeta Ashram, Delhi · Books Available</h1><p class="pm">Books are given by donation · Order online at bhagavadgeetahub.org/books.html</p><div class="pg">';
+BOOKS.forEach(function(b){var s=imgsrc(b);h+='<div class="pi">'+(s?'<img src="'+esc(s)+'" alt="">':'')+'<b>'+esc(b.t)+'</b>'+esc(b.l)+(b.c?' · '+esc(b.c):'')+(b.pg&&b.pg!=="-"?' · '+esc(b.pg)+' pages':'')+'<br>Copies: ______</div>'});
+h+='</div><p class="pf">To order, call Geeta Ashram Headquarters 011-25694380 / 9958545353 and tell Guru Maa or '+esc(CONTACT)+'. Jai Shri Krishna · Jai Gurudev</p>';
+$("plx").innerHTML=h;document.body.classList.add("plist");setTimeout(function(){window.print()},300)}
+window.addEventListener("afterprint",function(){document.body.classList.remove("plist")});
+$("pbk").onclick=plist;
 render();
 </script></body></html>
