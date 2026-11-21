@@ -29,3 +29,4 @@ d.querySelectorAll("button").forEach(function(b){b.onclick=function(){pick(+b.ge
 document.getElementById("q").oninput=R;R();
 });
 })();
+document.write('<script src="ashram-folders.js"><\/script>');
