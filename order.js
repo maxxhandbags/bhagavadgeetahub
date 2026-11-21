@@ -1,5 +1,4 @@
 document.write('<script src="guruprasad.js"><\/script>');
-document.write('<script src="janmotsav.js"><\/script>');
 (function(){
 var YT12="https://youtu.be/_LjkRoT2NGU",MAIL="https://formsubmit.co/Jskjgdgita@gmail.com";
 window.addEventListener("load",function(){
